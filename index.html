@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,14 +20,18 @@ html{
 }
 
 body{
-    font-family:Arial, Tahoma, sans-serif;
+    font-family:Arial,Tahoma,sans-serif;
     background:
-        radial-gradient(circle at top, #fff6fb 0%, #f8e7ef 35%, #ead5e0 100%);
+        radial-gradient(circle at top,#fff6fb 0%,#f8e7ef 35%,#ead5e0 100%);
     color:#4a2638;
     overflow-x:hidden;
 }
 
-/* HERO */
+.hidden{
+    display:none !important;
+}
+
+/* ================= HERO ================= */
 
 .hero{
     min-height:100vh;
@@ -110,19 +115,14 @@ body{
 
 .btn:hover{
     transform:translateY(-4px) scale(1.03);
-    box-shadow:0 18px 35px rgba(130,45,85,.4);
 }
 
-/* GENERAL */
+/* ================= GENERAL ================= */
 
 section{
     padding:80px 20px;
     max-width:1100px;
     margin:auto;
-}
-
-.hidden{
-    display:none;
 }
 
 .section-title{
@@ -139,7 +139,7 @@ section{
     margin-bottom:35px;
 }
 
-/* MESSAGE */
+/* ================= MESSAGE ================= */
 
 .message-card{
     background:rgba(255,255,255,.82);
@@ -173,7 +173,7 @@ section{
     margin-top:30px;
 }
 
-/* MUSIC */
+/* ================= MUSIC ================= */
 
 .music-card{
     background:rgba(255,255,255,.85);
@@ -200,7 +200,7 @@ audio{
     margin-top:20px;
 }
 
-/* REASONS */
+/* ================= REASONS ================= */
 
 .reasons-grid{
     display:grid;
@@ -232,7 +232,7 @@ audio{
     line-height:1.8;
 }
 
-/* GALLERY */
+/* ================= GALLERY ================= */
 
 .gallery{
     display:grid;
@@ -266,7 +266,7 @@ audio{
     transform:scale(1.07);
 }
 
-/* STORY */
+/* ================= STORY ================= */
 
 .story-card{
     background:rgba(255,255,255,.82);
@@ -288,7 +288,275 @@ audio{
     margin-bottom:7px;
 }
 
-/* FINAL */
+/* ================= VIDEO ================= */
+
+.video-section{
+    text-align:center;
+}
+
+.video-frame{
+    width:min(850px,95%);
+    margin:auto;
+    padding:10px;
+    border-radius:25px;
+    background:linear-gradient(
+        135deg,
+        rgba(255,255,255,.9),
+        rgba(255,190,210,.7),
+        rgba(255,255,255,.9)
+    );
+    box-shadow:0 25px 70px rgba(0,0,0,.18);
+}
+
+.video-frame video{
+    width:100%;
+    display:block;
+    border-radius:18px;
+    background:#111;
+}
+
+/* ================= BIRTHDAY SURPRISE ================= */
+
+.birthday-surprise{
+    max-width:1100px;
+    margin:auto;
+    text-align:center;
+    padding:90px 20px;
+}
+
+.surprise-header{
+    margin-bottom:45px;
+}
+
+.sparkles{
+    font-size:28px;
+    letter-spacing:12px;
+    color:#c15b83;
+    margin-bottom:15px;
+}
+
+.surprise-header > p{
+    font-size:12px;
+    letter-spacing:4px;
+    color:#986078;
+    margin-bottom:12px;
+}
+
+.surprise-header h2{
+    font-family:Georgia,serif;
+    font-size:40px;
+    color:#7c3455;
+}
+
+.age-number{
+    font-family:Georgia,serif;
+    font-size:110px;
+    line-height:1;
+    font-weight:bold;
+    background:linear-gradient(135deg,#c15b83,#8f3f64);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    margin:15px 0;
+    filter:drop-shadow(0 10px 15px rgba(130,45,85,.15));
+}
+
+.surprise-header h3{
+    color:#82556a;
+    font-size:20px;
+}
+
+/* CAKE */
+
+.cake-area{
+    background:rgba(255,255,255,.72);
+    backdrop-filter:blur(15px);
+    border:1px solid rgba(255,255,255,.9);
+    border-radius:35px;
+    padding:55px 20px;
+    box-shadow:0 20px 60px rgba(90,30,60,.14);
+}
+
+.cake{
+    position:relative;
+    width:260px;
+    height:190px;
+    margin:0 auto 35px;
+}
+
+.cake-bottom{
+    position:absolute;
+    bottom:0;
+    left:10px;
+    width:240px;
+    height:80px;
+    border-radius:15px 15px 25px 25px;
+    background:linear-gradient(135deg,#c85b86,#9b4269);
+    box-shadow:0 15px 25px rgba(100,30,60,.25);
+}
+
+.cake-middle{
+    position:absolute;
+    bottom:60px;
+    left:25px;
+    width:210px;
+    height:65px;
+    border-radius:15px 15px 20px 20px;
+    background:linear-gradient(135deg,#f3c5d5,#e79ab8);
+}
+
+.cake-top{
+    position:absolute;
+    bottom:110px;
+    left:40px;
+    width:180px;
+    height:45px;
+    border-radius:50%;
+    background:#fff1f6;
+    border:5px solid #f4c8d8;
+    z-index:3;
+}
+
+/* CANDLES */
+
+.candle{
+    position:absolute;
+    bottom:145px;
+    width:15px;
+    height:55px;
+    border-radius:5px;
+    background:linear-gradient(
+        90deg,
+        #fff,
+        #d8799b,
+        #fff
+    );
+    z-index:5;
+}
+
+.candle1{
+    left:75px;
+}
+
+.candle2{
+    left:123px;
+}
+
+.candle3{
+    left:171px;
+}
+
+.flame{
+    position:absolute;
+    top:-32px;
+    left:-5px;
+    font-size:25px;
+    animation:flicker .7s infinite alternate;
+    transition:.3s;
+}
+
+.flame.off{
+    opacity:0;
+    transform:scale(0);
+}
+
+@keyframes flicker{
+    from{
+        transform:scale(.9) rotate(-5deg);
+    }
+
+    to{
+        transform:scale(1.1) rotate(5deg);
+    }
+}
+
+.blow-btn{
+    border:0;
+    padding:16px 30px;
+    border-radius:50px;
+    background:linear-gradient(135deg,#c85b86,#8f3f64);
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    box-shadow:0 12px 30px rgba(130,45,85,.25);
+    transition:.3s;
+}
+
+.blow-btn:hover{
+    transform:translateY(-4px) scale(1.03);
+}
+
+.hint{
+    margin-top:18px;
+    color:#8a5b70;
+}
+
+/* SECRET MESSAGE */
+
+.secret-message{
+    margin:45px auto 0;
+    max-width:750px;
+    background:rgba(255,255,255,.9);
+    padding:45px 30px;
+    border-radius:30px;
+    box-shadow:
+        0 20px 70px rgba(90,30,60,.18),
+        0 0 40px rgba(255,120,160,.15);
+    animation:secretAppear 1s ease;
+}
+
+@keyframes secretAppear{
+    from{
+        opacity:0;
+        transform:translateY(40px) scale(.95);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0) scale(1);
+    }
+}
+
+.secret-icon{
+    font-size:60px;
+    margin-bottom:15px;
+}
+
+.secret-message h2{
+    color:#8f3f64;
+    font-family:Georgia,serif;
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+.secret-message p{
+    font-size:19px;
+    line-height:2;
+    color:#5e3a4b;
+    margin-bottom:18px;
+}
+
+.special-line{
+    font-weight:bold;
+    color:#9b4269 !important;
+    font-size:22px !important;
+}
+
+.secret-signature{
+    margin-top:30px;
+    font-size:24px;
+    font-weight:bold;
+    color:#9b4269;
+    line-height:1.8;
+}
+
+.confetti-text{
+    margin-top:25px;
+    font-size:30px;
+    letter-spacing:8px;
+}
+
+/* ================= FINAL ================= */
 
 .final{
     min-height:70vh;
@@ -324,7 +592,7 @@ audio{
     font-weight:bold;
 }
 
-/* LIGHTBOX */
+/* ================= LIGHTBOX ================= */
 
 .lightbox{
     position:fixed;
@@ -359,7 +627,7 @@ audio{
     z-index:10;
 }
 
-/* HEARTS */
+/* ================= HEARTS ================= */
 
 .heart{
     position:fixed;
@@ -371,17 +639,19 @@ audio{
 }
 
 @keyframes heartUp{
+
     0%{
         transform:translateY(0) scale(.7) rotate(0deg);
         opacity:1;
     }
+
     100%{
         transform:translateY(-110vh) scale(1.5) rotate(25deg);
         opacity:0;
     }
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media(max-width:800px){
 
@@ -448,6 +718,36 @@ audio{
     .gallery{
         grid-template-columns:repeat(2,1fr);
     }
+
+    .surprise-header h2{
+        font-size:30px;
+    }
+
+    .age-number{
+        font-size:85px;
+    }
+
+    .cake{
+        transform:scale(.85);
+        margin-top:-10px;
+        margin-bottom:15px;
+    }
+
+    .cake-area{
+        padding:40px 10px;
+    }
+
+    .secret-message{
+        padding:35px 20px;
+    }
+
+    .secret-message h2{
+        font-size:27px;
+    }
+
+    .secret-message p{
+        font-size:17px;
+    }
 }
 
 </style>
@@ -455,7 +755,7 @@ audio{
 
 <body>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section class="hero" id="home">
 
@@ -481,7 +781,7 @@ audio{
 </section>
 
 
-<!-- MESSAGE -->
+<!-- ================= MESSAGE ================= -->
 
 <section class="surprise hidden" id="surprise">
 
@@ -562,9 +862,11 @@ audio{
         </div>
 
         <div style="text-align:center;">
+
             <button class="btn" onclick="showEverything()">
                 ✨ كمّلي المفاجأة
             </button>
+
         </div>
 
     </div>
@@ -572,7 +874,116 @@ audio{
 </section>
 
 
-<!-- MUSIC -->
+<!-- ================= BIRTHDAY SURPRISE ================= -->
+
+<section class="birthday-surprise hidden" id="birthdaySurprise">
+
+    <div class="surprise-header">
+
+        <div class="sparkles">
+            ✦ ✧ ✦
+        </div>
+
+        <p>
+            ONE MORE SURPRISE FOR YOU
+        </p>
+
+        <h2>
+            🎂 عيد ميلاد سعيد يا سارة
+        </h2>
+
+        <div class="age-number">
+            33
+        </div>
+
+        <h3>
+            سنة من الجمال والذكريات ❤️
+        </h3>
+
+    </div>
+
+
+    <div class="cake-area">
+
+        <div class="cake">
+
+            <div class="candle candle1">
+                <span class="flame">🔥</span>
+            </div>
+
+            <div class="candle candle2">
+                <span class="flame">🔥</span>
+            </div>
+
+            <div class="candle candle3">
+                <span class="flame">🔥</span>
+            </div>
+
+            <div class="cake-top"></div>
+
+            <div class="cake-middle"></div>
+
+            <div class="cake-bottom"></div>
+
+        </div>
+
+
+        <button class="blow-btn" onclick="blowCandles()">
+            🕯️ اطفي الشموع
+        </button>
+
+        <p class="hint" id="candleHint">
+            اضغطي على الزر وشوفي المفاجأة ✨
+        </p>
+
+    </div>
+
+
+    <div class="secret-message hidden" id="secretMessage">
+
+        <div class="secret-icon">
+            💌
+        </div>
+
+        <h2>
+            رسالة سرية لسارة ❤️
+        </h2>
+
+        <p>
+            لو الأيام كلها بتتغير،
+            فأنا أتمنى حاجة واحدة بس...
+        </p>
+
+        <p class="special-line">
+            إن صداقتنا تفضل واحدة من أجمل الحاجات
+            اللي حصلت لنا في الحياة. ❤️
+        </p>
+
+        <p>
+            كل سنة وأنتِ معايا،
+            وكل سنة نضحك أكتر،
+            ونتصور أكتر،
+            ونكتب ذكريات جديدة أحلى من اللي فاتت.
+        </p>
+
+        <div class="secret-signature">
+
+            بحبك يا سارة ❤️
+            <br>
+            إسراء
+
+        </div>
+
+        <div class="confetti-text">
+            🎉 ✨ 🎂 ✨ 🎉
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MUSIC ================= -->
 
 <section class="music hidden" id="music">
 
@@ -599,8 +1010,13 @@ audio{
         </p>
 
         <audio controls loop>
-            <source src="Nabil - Sobhano _ نبيل - سبحانه(MP3_160K).mp3" type="audio/mpeg" type="audio/mpeg">
+
+            <source
+                src="Nabil - Sobhano _ نبيل - سبحانه(MP3_160K).mp3"
+                type="audio/mpeg">
+
             المتصفح لا يدعم تشغيل الصوت.
+
         </audio>
 
     </div>
@@ -608,7 +1024,36 @@ audio{
 </section>
 
 
-<!-- 33 REASONS -->
+<!-- ================= VIDEO ================= -->
+
+<section class="video-section hidden" id="videoSection">
+
+    <h2 class="section-title">
+        🎬 ذكرياتنا في فيديو
+    </h2>
+
+    <p class="section-subtitle">
+        لحظات تستاهل تفضل معانا للأبد ❤️
+    </p>
+
+    <div class="video-frame">
+
+        <video controls playsinline preload="metadata">
+
+            <source
+                src="اسم-الفيديو.mp4"
+                type="video/mp4">
+
+            المتصفح لا يدعم تشغيل الفيديو.
+
+        </video>
+
+    </div>
+
+</section>
+
+
+<!-- ================= 33 REASONS ================= -->
 
 <section class="reasons hidden" id="reasons">
 
@@ -636,7 +1081,7 @@ audio{
         <div class="reason"><div class="reason-number">12</div><div class="reason-text">إنك بتسمعيلي</div></div>
         <div class="reason"><div class="reason-number">13</div><div class="reason-text">إنك بتسندي</div></div>
         <div class="reason"><div class="reason-number">14</div><div class="reason-text">قلبك الأبيض</div></div>
-        <div class="reason"><div class="reason-number">15</div><div class="reason-text">حبك ليا </div></div>
+        <div class="reason"><div class="reason-number">15</div><div class="reason-text">حبك ليا</div></div>
         <div class="reason"><div class="reason-number">16</div><div class="reason-text">روحك الجميلة</div></div>
         <div class="reason"><div class="reason-number">17</div><div class="reason-text">صراحتك</div></div>
         <div class="reason"><div class="reason-number">18</div><div class="reason-text">حنيتك</div></div>
@@ -661,7 +1106,7 @@ audio{
 </section>
 
 
-<!-- MEMORIES -->
+<!-- ================= MEMORIES ================= -->
 
 <section class="memories hidden" id="memories">
 
@@ -675,92 +1120,33 @@ audio{
 
     <div class="gallery">
 
-        <div class="photo">
-            <img src="Messenger_creation_BF0EAC21-3017-49E8-8406-626323BE15C1.jpeg" alt="Memory 1">
-        </div>
-
-        <div class="photo">
-            <img src="IMG_9684.JPG" alt="Memory 2">
-        </div>
-
-        <div class="photo">
-            <img src="IMG_8120.JPG" alt="Memory 3">
-        </div>
-
-        <div class="photo">
-            <img src="IMG_7546.HEIC" alt="Memory 4">
-        </div>
-
-        <div class="photo">
-            <img src="IMG_6253.JPG" alt="Memory 5">
-        </div>
-
-        <div class="photo">
-            <img src="IMG_1716.JPG" alt="Memory 6">
-        </div>
-
-        <div class="photo">
-            <img src="IMG-20251117-WA0014.jpg" alt="Memory 7">
-        </div>
-
-        <div class="photo">
-            <img src="20260730_165633.jpg" alt="Memory 8">
-        </div>
-
-        <div class="photo">
-            <img src="20260425_214045.jpg" alt="Memory 9">
-        </div>
-
-        <div class="photo">
-            <img src="20260309_172141.jpg" alt="Memory 10">
-        </div>
-
-        <div class="photo">
-            <img src="20260309_153032.heic" alt="Memory 11">
-        </div>
-
-        <div class="photo">
-            <img src="20251219_152504.jpg" alt="Memory 12">
-        </div>
-
-        <div class="photo">
-            <img src="20251127_171550.heic" alt="Memory 13">
-        </div>
-
-        <div class="photo">
-            <img src="20251016_222922.jpg" alt="Memory 14">
-        </div>
-
-        <div class="photo">
-            <img src="20250610_001417_IMG_0970.JPG" alt="Memory 15">
-        </div>
-
-        <div class="photo">
-            <img src="20250610_001333_IMG_0968.JPG" alt="Memory 16">
-        </div>
-
-        <div class="photo">
-            <img src="20250420_190932_IMG_9291.JPG" alt="Memory 17">
-        </div>
-
-        <div class="photo">
-            <img src="20250331_075957_IMG_7753.JPG" alt="Memory 18">
-        </div>
-
-        <div class="photo">
-            <img src="Messenger_creation_BF0EAC21-3017-49E8-8406-626323BE15C1.jpeg" alt="Memory 19">
-        </div>
-
-        <div class="photo">
-            <img src="IMG_9684.JPG" alt="Memory 20">
-        </div>
+        <div class="photo"><img src="Messenger_creation_BF0EAC21-3017-49E8-8406-626323BE15C1.jpeg" alt="Memory 1"></div>
+        <div class="photo"><img src="IMG_9684.JPG" alt="Memory 2"></div>
+        <div class="photo"><img src="IMG_8120.JPG" alt="Memory 3"></div>
+        <div class="photo"><img src="IMG_7546.HEIC" alt="Memory 4"></div>
+        <div class="photo"><img src="IMG_6253.JPG" alt="Memory 5"></div>
+        <div class="photo"><img src="IMG_1716.JPG" alt="Memory 6"></div>
+        <div class="photo"><img src="IMG-20251117-WA0014.jpg" alt="Memory 7"></div>
+        <div class="photo"><img src="20260730_165633.jpg" alt="Memory 8"></div>
+        <div class="photo"><img src="20260425_214045.jpg" alt="Memory 9"></div>
+        <div class="photo"><img src="20260309_172141.jpg" alt="Memory 10"></div>
+        <div class="photo"><img src="20260309_153032.heic" alt="Memory 11"></div>
+        <div class="photo"><img src="20251219_152504.jpg" alt="Memory 12"></div>
+        <div class="photo"><img src="20251127_171550.heic" alt="Memory 13"></div>
+        <div class="photo"><img src="20251016_222922.jpg" alt="Memory 14"></div>
+        <div class="photo"><img src="20250610_001417_IMG_0970.JPG" alt="Memory 15"></div>
+        <div class="photo"><img src="20250610_001333_IMG_0968.JPG" alt="Memory 16"></div>
+        <div class="photo"><img src="20250420_190932_IMG_9291.JPG" alt="Memory 17"></div>
+        <div class="photo"><img src="20250331_075957_IMG_7753.JPG" alt="Memory 18"></div>
+        <div class="photo"><img src="Messenger_creation_BF0EAC21-3017-49E8-8406-626323BE15C1.jpeg" alt="Memory 19"></div>
+        <div class="photo"><img src="IMG_9684.JPG" alt="Memory 20"></div>
 
     </div>
 
 </section>
 
 
-<!-- STORY -->
+<!-- ================= STORY ================= -->
 
 <section class="story hidden" id="story">
 
@@ -813,7 +1199,7 @@ audio{
 </section>
 
 
-<!-- FINAL -->
+<!-- ================= FINAL ================= -->
 
 <section class="final">
 
@@ -836,11 +1222,13 @@ audio{
 </section>
 
 
-<!-- LIGHTBOX -->
+<!-- ================= LIGHTBOX ================= -->
 
 <div class="lightbox" id="lightbox">
 
-    <div class="close" onclick="closeImage()">×</div>
+    <div class="close" onclick="closeImage()">
+        ×
+    </div>
 
     <img id="bigImage" src="" alt="Memory">
 
@@ -849,11 +1237,12 @@ audio{
 
 <script>
 
-/* فتح المفاجأة */
+/* ================= OPEN SURPRISE ================= */
 
 function openSurprise(){
 
-    const surprise = document.getElementById("surprise");
+    const surprise =
+        document.getElementById("surprise");
 
     surprise.classList.remove("hidden");
 
@@ -866,49 +1255,113 @@ function openSurprise(){
         });
 
     },100);
-
 }
 
 
-/* إظهار باقي الموقع */
+/* ================= SHOW EVERYTHING ================= */
 
 function showEverything(){
 
-    document.getElementById("music").classList.remove("hidden");
-    document.getElementById("reasons").classList.remove("hidden");
-    document.getElementById("memories").classList.remove("hidden");
-    document.getElementById("story").classList.remove("hidden");
+    document
+        .getElementById("birthdaySurprise")
+        .classList.remove("hidden");
+
+    document
+        .getElementById("music")
+        .classList.remove("hidden");
+
+    document
+        .getElementById("videoSection")
+        .classList.remove("hidden");
+
+    document
+        .getElementById("reasons")
+        .classList.remove("hidden");
+
+    document
+        .getElementById("memories")
+        .classList.remove("hidden");
+
+    document
+        .getElementById("story")
+        .classList.remove("hidden");
 
     createHearts();
 
     setTimeout(function(){
 
-        document.getElementById("music").scrollIntoView({
-            behavior:"smooth"
-        });
+        document
+            .getElementById("birthdaySurprise")
+            .scrollIntoView({
+                behavior:"smooth"
+            });
 
     },100);
-
 }
 
 
-/* القلوب */
+/* ================= BLOW CANDLES ================= */
+
+function blowCandles(){
+
+    const flames =
+        document.querySelectorAll(".flame");
+
+    flames.forEach(function(flame){
+
+        flame.classList.add("off");
+
+    });
+
+    document
+        .getElementById("candleHint")
+        .innerHTML =
+        "🎉 كل سنة وأنتِ طيبة يا سارة ❤️";
+
+    setTimeout(function(){
+
+        document
+            .getElementById("secretMessage")
+            .classList.remove("hidden");
+
+        createHearts();
+
+        createConfetti();
+
+        document
+            .getElementById("secretMessage")
+            .scrollIntoView({
+                behavior:"smooth",
+                block:"center"
+            });
+
+    },700);
+}
+
+
+/* ================= HEARTS ================= */
 
 function createHearts(){
 
     for(let i=0;i<25;i++){
 
-        let heart=document.createElement("div");
+        let heart =
+            document.createElement("div");
 
         heart.className="heart";
 
-        heart.innerHTML=["❤️","💕","💗","💖","✨"][Math.floor(Math.random()*5)];
+        heart.innerHTML =
+            ["❤️","💕","💗","💖","✨"]
+            [Math.floor(Math.random()*5)];
 
-        heart.style.left=Math.random()*100+"vw";
+        heart.style.left =
+            Math.random()*100+"vw";
 
-        heart.style.animationDuration=(3+Math.random()*4)+"s";
+        heart.style.animationDuration =
+            (3+Math.random()*4)+"s";
 
-        heart.style.fontSize=(18+Math.random()*25)+"px";
+        heart.style.fontSize =
+            (18+Math.random()*25)+"px";
 
         document.body.appendChild(heart);
 
@@ -919,17 +1372,77 @@ function createHearts(){
         },7000);
 
     }
-
 }
 
 
-/* تكبير الصور */
+/* ================= CONFETTI ================= */
 
-const photos=document.querySelectorAll(".photo img");
+function createConfetti(){
 
-const lightbox=document.getElementById("lightbox");
+    const symbols =
+        ["🎉","✨","💖","💕","🎊","⭐","❤️"];
 
-const bigImage=document.getElementById("bigImage");
+    for(let i=0;i<45;i++){
+
+        let confetti =
+            document.createElement("div");
+
+        confetti.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random()*symbols.length
+                )
+            ];
+
+        confetti.style.position="fixed";
+
+        confetti.style.left =
+            Math.random()*100+"vw";
+
+        confetti.style.top="-30px";
+
+        confetti.style.fontSize =
+            (15+Math.random()*20)+"px";
+
+        confetti.style.zIndex="10000";
+
+        confetti.style.pointerEvents="none";
+
+        confetti.style.transition =
+            "transform "+
+            (2+Math.random()*3)+
+            "s linear, opacity 3s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(function(){
+
+            confetti.style.transform =
+                "translateY(110vh) rotate(720deg)";
+
+            confetti.style.opacity="0";
+
+        },100);
+
+        setTimeout(function(){
+
+            confetti.remove();
+
+        },5000);
+    }
+}
+
+
+/* ================= PHOTO LIGHTBOX ================= */
+
+const photos =
+    document.querySelectorAll(".photo img");
+
+const lightbox =
+    document.getElementById("lightbox");
+
+const bigImage =
+    document.getElementById("bigImage");
 
 photos.forEach(function(photo){
 
@@ -953,8 +1466,6 @@ function closeImage(){
 }
 
 
-/* إغلاق الصورة عند الضغط خارجها */
-
 lightbox.addEventListener("click",function(e){
 
     if(e.target===lightbox){
@@ -965,8 +1476,6 @@ lightbox.addEventListener("click",function(e){
 
 });
 
-
-/* زر ESC */
 
 document.addEventListener("keydown",function(e){
 
@@ -981,4 +1490,4 @@ document.addEventListener("keydown",function(e){
 </script>
 
 </body>
-        </html>
+    </html>
