@@ -7,6 +7,7 @@
 <title>Happy Birthday Sara ❤️</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
@@ -19,381 +20,316 @@ html{
 
 body{
     font-family:Arial, Tahoma, sans-serif;
-    background:#faf5f2;
-    color:#49383b;
+    background:
+        radial-gradient(circle at top, #fff6fb 0%, #f8e7ef 35%, #ead5e0 100%);
+    color:#4a2638;
     overflow-x:hidden;
 }
 
-.hidden{
-    display:none !important;
-}
-
-button{
-    font-family:inherit;
-}
-
-/* ===== HERO ===== */
+/* HERO */
 
 .hero{
     min-height:100vh;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    position:relative;
     padding:30px 20px;
-    background:
-        radial-gradient(circle at 20% 20%,#f4d9d7 0,transparent 30%),
-        radial-gradient(circle at 80% 80%,#ead2c6 0,transparent 30%),
-        linear-gradient(135deg,#fffaf7,#f3e4df);
+    position:relative;
+    overflow:hidden;
 }
 
-.hero:before{
+.hero::before{
     content:"";
     position:absolute;
-    inset:18px;
-    border:1px solid rgba(130,90,80,.2);
-}
-
-.hero-content{
-    position:relative;
-    z-index:2;
-    max-width:700px;
-}
-
-.small-text{
-    color:#9b7468;
-    font-size:13px;
-    letter-spacing:3px;
-    margin-bottom:25px;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(255,255,255,.35);
+    filter:blur(20px);
+    top:-200px;
+    right:-150px;
 }
 
 .hero-photo{
-    width:210px;
-    height:210px;
+    width:270px;
+    height:270px;
     object-fit:cover;
     border-radius:50%;
-    border:7px solid white;
-    box-shadow:0 20px 55px rgba(70,45,40,.2);
-    margin-bottom:25px;
+    border:8px solid rgba(255,255,255,.9);
+    box-shadow:
+        0 20px 50px rgba(90,30,60,.25),
+        0 0 0 12px rgba(255,255,255,.25);
+    position:relative;
+    z-index:2;
+    animation:float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-12px)}
 }
 
 .hero h1{
-    font-family:Georgia,serif;
-    font-size:55px;
-    color:#49363a;
-    margin-bottom:12px;
+    margin-top:30px;
+    font-size:clamp(38px,8vw,75px);
+    color:#7c3455;
+    font-weight:800;
+    position:relative;
+    z-index:2;
 }
 
 .hero h1 span{
-    color:#aa6d78;
+    color:#c15b83;
 }
 
 .hero p{
-    font-size:19px;
-    color:#765f63;
-    line-height:1.8;
+    margin-top:12px;
+    font-size:22px;
+    color:#714258;
+    position:relative;
+    z-index:2;
 }
-
-.age{
-    margin:20px 0 30px;
-    font-family:Georgia,serif;
-    color:#a57b6e;
-    font-size:23px;
-    letter-spacing:5px;
-}
-
-/* ===== BUTTON ===== */
 
 .btn{
-    border:0;
-    background:#4b383b;
+    margin-top:30px;
+    padding:17px 35px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(135deg,#c85b86,#8f3f64);
     color:white;
-    padding:15px 32px;
-    border-radius:5px;
-    font-size:17px;
+    font-size:19px;
+    font-weight:bold;
     cursor:pointer;
-    margin-top:28px;
-    box-shadow:0 12px 30px rgba(50,35,35,.2);
+    box-shadow:0 12px 30px rgba(130,45,85,.3);
     transition:.3s;
-}
-
-.btn:hover{
-    background:#aa6d78;
-    transform:translateY(-3px);
-}
-
-/* ===== SURPRISE ===== */
-
-.surprise{
-    min-height:100vh;
-    padding:80px 18px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
-    overflow:hidden;
-    background:linear-gradient(135deg,#f8ebe7,#fff8f5);
-}
-
-.message-card{
-    width:100%;
-    max-width:850px;
-    background:rgba(255,255,255,.92);
-    padding:45px 35px;
-    border-radius:18px;
-    box-shadow:0 25px 70px rgba(70,45,40,.15);
-    border:1px solid #eadbd5;
     position:relative;
     z-index:5;
 }
 
-.message-title{
+.btn:hover{
+    transform:translateY(-4px) scale(1.03);
+    box-shadow:0 18px 35px rgba(130,45,85,.4);
+}
+
+/* GENERAL */
+
+section{
+    padding:80px 20px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.hidden{
+    display:none;
+}
+
+.section-title{
     text-align:center;
+    font-size:38px;
+    color:#7c3455;
+    margin-bottom:15px;
+}
+
+.section-subtitle{
+    text-align:center;
+    color:#82556a;
+    font-size:17px;
     margin-bottom:35px;
 }
 
-.message-number{
-    font-family:Georgia,serif;
-    font-size:70px;
-    color:#b27f73;
+/* MESSAGE */
+
+.message-card{
+    background:rgba(255,255,255,.82);
+    backdrop-filter:blur(12px);
+    border-radius:30px;
+    padding:45px 35px;
+    box-shadow:0 20px 60px rgba(90,30,60,.15);
+    border:1px solid rgba(255,255,255,.8);
+    line-height:2.3;
+    font-size:20px;
+    text-align:right;
 }
 
-.message-title h2{
-    font-family:Georgia,serif;
-    color:#4b383b;
-    font-size:32px;
-    line-height:1.5;
+.message-card .opening{
+    text-align:center;
+    font-size:27px;
+    font-weight:bold;
+    color:#9b4269;
+    margin-bottom:25px;
 }
 
-.message{
-    font-size:17px;
-    line-height:2.1;
-    color:#5e4d50;
-}
-
-.message p{
-    margin-bottom:22px;
-}
-
-.message strong{
-    color:#a86672;
+.message-card p{
+    margin-bottom:20px;
 }
 
 .signature{
     text-align:center;
-    color:#a86672;
-    font-family:Georgia,serif;
-    font-size:28px;
-    margin-top:35px;
+    font-size:24px;
+    font-weight:bold;
+    color:#9b4269;
+    margin-top:30px;
 }
 
-/* ===== PARTICLES ===== */
+/* MUSIC */
 
-.heart{
-    position:absolute;
-    bottom:-30px;
-    color:#b87883;
-    font-size:25px;
-    animation:up 6s linear forwards;
-    z-index:2;
-}
-
-@keyframes up{
-    from{
-        transform:translateY(0) rotate(0);
-        opacity:1;
-    }
-    to{
-        transform:translateY(-110vh) rotate(360deg);
-        opacity:0;
-    }
-}
-
-/* ===== MUSIC ===== */
-
-.music{
-    padding:80px 20px;
+.music-card{
+    background:rgba(255,255,255,.85);
+    padding:35px;
+    border-radius:30px;
     text-align:center;
-    background:#faf6f3;
+    box-shadow:0 15px 45px rgba(90,30,60,.13);
 }
 
-.section-title{
-    font-family:Georgia,serif;
-    font-size:42px;
-    color:#4b383b;
+.music-icon{
+    font-size:55px;
     margin-bottom:15px;
 }
 
-.section-text{
-    color:#756266;
-    font-size:17px;
-    margin-bottom:30px;
-}
-
-.audio-box{
-    max-width:600px;
-    margin:auto;
-    padding:25px;
-    background:white;
-    border-radius:15px;
-    box-shadow:0 12px 35px rgba(70,45,40,.1);
+.music-card h3{
+    color:#7c3455;
+    margin-bottom:10px;
+    font-size:26px;
 }
 
 audio{
     width:100%;
+    max-width:600px;
+    margin-top:20px;
 }
 
-/* ===== 33 REASONS ===== */
-
-.reasons{
-    padding:90px 20px;
-    background:#f2e5df;
-}
-
-.reasons-header{
-    text-align:center;
-    margin-bottom:45px;
-}
+/* REASONS */
 
 .reasons-grid{
-    max-width:1000px;
-    margin:auto;
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:15px;
+    gap:18px;
 }
 
 .reason{
-    background:white;
-    padding:22px;
-    min-height:130px;
-    border-radius:12px;
-    box-shadow:0 8px 25px rgba(70,45,40,.08);
+    background:rgba(255,255,255,.85);
+    padding:25px 18px;
+    border-radius:22px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(90,30,60,.1);
+    transition:.3s;
+}
+
+.reason:hover{
+    transform:translateY(-7px);
 }
 
 .reason-number{
-    font-family:Georgia,serif;
     font-size:28px;
-    color:#ad786e;
-    margin-bottom:8px;
+    font-weight:bold;
+    color:#c15b83;
+    margin-bottom:10px;
 }
 
-.reason p{
-    color:#5f5052;
-    line-height:1.7;
+.reason-text{
+    line-height:1.8;
 }
 
-/* ===== GALLERY ===== */
-
-.memories{
-    padding:90px 15px;
-    background:#fcf9f7;
-    text-align:center;
-}
+/* GALLERY */
 
 .gallery{
-    max-width:1100px;
-    margin:45px auto 0;
     display:grid;
     grid-template-columns:repeat(4,1fr);
-    gap:15px;
+    gap:18px;
 }
 
 .photo{
-    background:white;
-    padding:6px;
-    border-radius:10px;
-    box-shadow:0 10px 30px rgba(70,45,40,.1);
-    cursor:pointer;
+    aspect-ratio:1/1;
     overflow:hidden;
+    border-radius:22px;
+    background:#ead8e0;
+    box-shadow:0 12px 30px rgba(70,30,50,.15);
+    cursor:pointer;
+    transition:.35s;
+}
+
+.photo:hover{
+    transform:translateY(-7px) scale(1.02);
 }
 
 .photo img{
-    display:block;
     width:100%;
-    height:250px;
+    height:100%;
     object-fit:cover;
-    border-radius:6px;
+    display:block;
     transition:.4s;
 }
 
 .photo:hover img{
-    transform:scale(1.05);
+    transform:scale(1.07);
 }
 
-/* ===== STORY ===== */
+/* STORY */
 
-.story{
-    padding:90px 20px;
-    text-align:center;
-    background:#f1e3de;
-}
-
-.story-box{
-    max-width:750px;
-    margin:40px auto 0;
+.story-card{
+    background:rgba(255,255,255,.82);
+    padding:40px;
+    border-radius:30px;
+    box-shadow:0 15px 50px rgba(90,30,60,.12);
+    line-height:2.2;
+    font-size:19px;
 }
 
 .story-item{
-    background:white;
-    padding:25px;
-    margin-bottom:18px;
-    border-radius:12px;
-    box-shadow:0 8px 25px rgba(70,45,40,.08);
-    text-align:right;
+    margin-bottom:28px;
+    padding-right:20px;
+    border-right:4px solid #c15b83;
 }
 
 .story-item h3{
-    color:#a66b75;
-    font-family:Georgia,serif;
-    font-size:24px;
-    margin-bottom:8px;
+    color:#8e3d60;
+    margin-bottom:7px;
 }
 
-.story-item p{
-    color:#615154;
-    line-height:1.8;
-}
-
-/* ===== FINAL ===== */
+/* FINAL */
 
 .final{
-    min-height:65vh;
+    min-height:70vh;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
     text-align:center;
-    padding:70px 20px;
-    background:linear-gradient(135deg,#ead8d1,#fff4f0,#e8d8d2);
+    background:
+        linear-gradient(
+            rgba(88,30,58,.65),
+            rgba(88,30,58,.65)
+        ),
+        url("20250610_001333_IMG_0968.JPG") center/cover;
+    color:white;
+    max-width:none;
 }
 
 .final h2{
-    font-family:Georgia,serif;
-    font-size:55px;
-    color:#4b383b;
-    margin-bottom:25px;
+    font-size:clamp(35px,7vw,65px);
+    margin-bottom:20px;
 }
 
 .final p{
-    font-size:19px;
+    font-size:22px;
+    max-width:750px;
     line-height:2;
-    color:#665457;
 }
 
-.final-sign{
-    font-family:Georgia,serif;
-    color:#a56a75;
-    font-size:28px;
-    margin-top:25px;
+.final .from{
+    margin-top:35px;
+    font-size:27px;
+    font-weight:bold;
 }
 
-/* ===== LIGHTBOX ===== */
+/* LIGHTBOX */
 
 .lightbox{
     position:fixed;
     inset:0;
-    background:rgba(20,15,15,.93);
+    background:rgba(20,5,15,.92);
     display:none;
     justify-content:center;
     align-items:center;
@@ -409,49 +345,58 @@ audio{
     max-width:95%;
     max-height:90vh;
     object-fit:contain;
+    border-radius:15px;
+    box-shadow:0 20px 80px rgba(0,0,0,.5);
 }
 
 .close{
     position:absolute;
-    top:15px;
+    top:20px;
     right:25px;
     color:white;
-    font-size:40px;
+    font-size:45px;
     cursor:pointer;
+    z-index:10;
 }
 
-/* ===== MOBILE ===== */
+/* HEARTS */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:25px;
+    animation:heartUp 5s linear forwards;
+    pointer-events:none;
+    z-index:9998;
+}
+
+@keyframes heartUp{
+    0%{
+        transform:translateY(0) scale(.7) rotate(0deg);
+        opacity:1;
+    }
+    100%{
+        transform:translateY(-110vh) scale(1.5) rotate(25deg);
+        opacity:0;
+    }
+}
+
+/* MOBILE */
 
 @media(max-width:800px){
 
-    .hero h1{
-        font-size:40px;
+    .hero-photo{
+        width:220px;
+        height:220px;
     }
 
-    .hero-photo{
-        width:175px;
-        height:175px;
+    .hero h1{
+        font-size:43px;
     }
 
     .message-card{
-        padding:35px 20px;
-    }
-
-    .message-number{
-        font-size:55px;
-    }
-
-    .message-title h2{
-        font-size:26px;
-    }
-
-    .message{
-        font-size:15px;
-        line-height:2;
-    }
-
-    .section-title{
-        font-size:34px;
+        padding:28px 20px;
+        font-size:18px;
     }
 
     .reasons-grid{
@@ -460,564 +405,580 @@ audio{
 
     .gallery{
         grid-template-columns:repeat(2,1fr);
-        gap:10px;
+        gap:12px;
     }
 
-    .photo img{
-        height:170px;
-    }
-
-    .final h2{
-        font-size:42px;
+    .story-card{
+        padding:25px 20px;
     }
 }
 
-@media(max-width:450px){
+@media(max-width:480px){
+
+    section{
+        padding:60px 15px;
+    }
+
+    .hero-photo{
+        width:190px;
+        height:190px;
+    }
 
     .hero h1{
-        font-size:34px;
+        font-size:37px;
+    }
+
+    .hero p{
+        font-size:18px;
+    }
+
+    .section-title{
+        font-size:31px;
     }
 
     .reasons-grid{
         grid-template-columns:1fr;
     }
 
-    .photo img{
-        height:150px;
+    .message-card{
+        font-size:17px;
+        line-height:2.1;
     }
 
+    .gallery{
+        grid-template-columns:repeat(2,1fr);
+    }
 }
 
 </style>
 </head>
 
-
 <body>
 
-
-<!-- =========================
-     1. FIRST SCREEN
-========================= -->
+<!-- HERO -->
 
 <section class="hero" id="home">
 
-<div class="hero-content">
+    <img
+        src="20250610_001333_IMG_0968.JPG"
+        class="hero-photo"
+        alt="Sara">
 
-<div class="small-text">
-A SPECIAL DAY • A SPECIAL PERSON
-</div>
+    <h1>
+        Happy Birthday
+        <span>Sara</span>
+        ❤️
+    </h1>
 
-<img
-src="20250610_001333_IMG_0968.JPG"
-class="hero-photo"
-alt="Sara">
+    <p>
+        33 سنة من الجمال والضحكة والذكريات الحلوة ✨
+    </p>
 
-<div class="age">
-33 YEARS
-</div>
-
-<h1>
-Happy Birthday <span>Sara</span>
-</h1>
-
-<p>
-إلى واحدة من أجمل وأغلى الناس في حياتي ❤️
-</p>
-
-<button class="btn" onclick="openSurprise()">
-🎁 افتحي المفاجأة
-</button>
-
-</div>
+    <button class="btn" onclick="openSurprise()">
+        🎁 افتحي المفاجأة
+    </button>
 
 </section>
 
 
-<!-- =========================
-     2. BIG MESSAGE
-========================= -->
+<!-- MESSAGE -->
 
 <section class="surprise hidden" id="surprise">
 
-<div class="message-card">
+    <h2 class="section-title">
+        رسالة من قلبي ليكي ❤️
+    </h2>
 
-<div class="message-title">
+    <div class="message-card">
 
-<div class="message-number">
-33
-</div>
+        <div class="opening">
+            إلى أغلى وأعز صاحبة في الدنيا ❤️
+        </div>
 
-<h2>
-إلى سارة… صاحبة العمر والذكريات الحلوة ❤️
-</h2>
+        <p>
+            كل سنة وأنتِ طيبة وبألف خير وصحة وسعادة ✨
+        </p>
 
-</div>
+        <p>
+            في يوم عيد ميلادك حبيت أكتبلك كلام ينوّر يومك زيك بالضبط،
+            كلام طالع من قلبي عشان يفكرك قد إيه أنتِ شخص غالي ومميز جداً في حياتي.
+        </p>
 
-<div class="message">
+        <p>
+            السنوات بتعدي والناس بتيجي وتروح،
+            لكن الصداقة الحقيقية هي اللي بتفضل ثابتة زي ما هي.
+            وأنتِ أثبتّي لي دايماً إنك مش مجرد صاحبة،
+            أنتِ أخت وسند والضحكة الدايمة اللي بتنوّر أوقاتي الحلوة،
+            والكتف اللي بيبسّط أي وقت صعب.
+        </p>
 
-<p>
-يمكن الكلام مهما طال مش هيقدر يوصف مكانتك عندي،
-ولا يقدر يوصف قد إيه أنا ممتنة إن ربنا حطني في طريقك
-وخلاني أعرف إن فيه في الدنيا صاحبة ممكن تكون أكتر من صاحبة…
-تكون أخت، وسند، وضحكة، وأمان، وذكريات حلوة بتفضل جوانا مهما السنين عدت. ❤️
-</p>
+        <p>
+            يمكن الأيام تاخدنا في طرق مختلفة،
+            ويمكن كل واحدة فينا يكون عندها حياتها وأحلامها وانشغالاتها،
+            لكن في ناس وجودهم في حياتنا بيكون مختلف،
+            ووجودك بالنسبة لي من الحاجات اللي مهما مر عليها وقت بتفضل غالية.
+        </p>
 
-<p>
-النهارده مش مجرد يوم عيد ميلادك…
-النهارده اليوم اللي اتولدت فيه واحدة من أجمل الناس
-اللي دخلوا حياتي، واحدة وجودها لوحده قادر يغير شكل اليوم ويخليه أحلى. 🥹💕
-</p>
+        <p>
+            ربنا يجعل السنة الجديدة دي سنة خير وبركة عليكي،
+            تحققّي فيها كل خطوة بتتمنيها وكل حلم شغالة عليه،
+            ويفتحلك أبواب النجاح والفرح من أوسع أبوابه.
+        </p>
 
-<p>
-ومهما حاولت أكتب وأقول، هفضل حاسة إن الكلام قليل عليكي.
-</p>
+        <p>
+            بتمنالك أيام مليانة راحة بال،
+            وضحك من القلب،
+            وناس تحبك وتعرف قيمتك زي ما أنتِ تستاهلي.
+        </p>
 
-<p>
-<strong>٣٣ سنة</strong> من عمرك عدّوا،
-وإن شاء الله اللي جاي يكون أجمل بكتير من كل اللي فات…
-سنة جديدة مليانة فرحة، ونجاح، وراحة بال،
-وضحك من القلب، وأيام حلوة تستاهليها. 🎂✨
-</p>
+        <p>
+            بتمنالك في الـ33 سنة الجديدة
+            حاجات كتير حلوة تليق بقلبك،
+            وأيام أحلى من كل الأيام اللي فاتت،
+            وأمنيات تتحقق واحدة واحدة من غير تعب ولا وجع.
+        </p>
 
-<p>
-نفسي السنة دي كل حاجة نفسك فيها تتحقق قدام عينيكي،
-وكل دعوة دعيتها في وقت كنتِ محتاجة فيها حاجة تفرح قلبك
-ربنا يحققها ليكي، وكل خطوة تخطيها تكون سبب في حاجة أجمل مستنياكي. 🤍
-</p>
+        <p>
+            شكراً على كل لحظة حلوة شاركتيها معايا،
+            وعلى كل ضحكة من القلب،
+            وعلى كل كلمة طمنتيني بيها،
+            وشكراً لأنك دايماً موجودة وبنفس الطيبة والجدعنة.
+        </p>
 
-<p>
-أتمنى تفضلي دايمًا بنفس قلبك الجميل،
-بنفس طيبتك، بنفس جدعنتك،
-وبنفس الروح اللي بتخلي وجودك مختلف عن أي حد تاني.
-</p>
+        <p>
+            مهما كتبت ومهما قلت مش هقدر أوصف مكانتك عندي بشكل كامل،
+            بس أتمنى دايماً تفضلي عارفة إن ليكي مكان كبير أوي في قلبي،
+            وإن وجودك في حياتي من أجمل الحاجات اللي حصلتلي.
+        </p>
 
-<p>
-وشكرًا على كل مرة كنتِ فيها موجودة من غير ما أطلب،
-وعلى كل مرة سمعتي كلامي،
-وعلى كل ضحكة ضحكناها سوا،
-وعلى كل ذكرى حلوة جمعتنا،
-وعلى كل موقف خلاني أقول لنفسي:
-<strong>الحمد لله إن عندي سارة. ❤️</strong>
-</p>
+        <p>
+            كل سنة وأنتِ أقرب لقلبي،
+            وكل سنة وأنتِ بخير وسعادة،
+            وعقبال 100 سنة حلوة شبه قلبك الأبيض 🎂🎉✨
+        </p>
 
-<p>
-يمكن الأيام تتغير، والناس تتغير،
-وكل واحد فينا يدخل مراحل جديدة في حياته،
-لكن فيه أشخاص بيكون ليهم مكان ثابت في القلب مهما حصل…
-وإنتِ واحدة من الناس دول.
-</p>
+        <div class="signature">
+            من إسراء ❤️
+        </div>
 
-<p>
-ولو في يوم الدنيا تعبتك،
-افتكري إن فيه حد بيتمنالك الخير من قلبه،
-وبيفرح لفرحك،
-وبيتمنى يشوفك دايمًا أحسن وأسعد وأقوى. 🫂💗
-</p>
+        <div style="text-align:center;">
+            <button class="btn" onclick="showEverything()">
+                ✨ كمّلي المفاجأة
+            </button>
+        </div>
 
-<p>
-أتمنى أشوفك دايمًا بتحققي اللي نفسك فيه،
-وأشوف ضحكتك موجودة في كل صورنا وذكرياتنا الجاية،
-ونفضل بعد سنين كتير قاعدين نفتكر الأيام دي
-ونضحك على كل حاجة حصلت بينا. 😂❤️
-</p>
-
-<p>
-والـ20 صورة اللي هتشوفيهم هنا مش مجرد صور…
-دي حتة صغيرة من ذكريات كتير بينا،
-وكل صورة وراها موقف وضحكة وحكاية،
-وأكيد لسه عندنا صور وذكريات أكتر بكتير مستنيانا. 📸💕
-</p>
-
-<p>
-كل سنة وإنتِ طيبة يا سارة،
-كل سنة وإنتِ منورة حياة كل اللي حواليكي،
-كل سنة وإنتِ أقرب لقلبي،
-كل سنة وإنتِ محققة حاجات أكتر مما تتمني،
-كل سنة وإنتِ سعيدة ومطمنة ومرتاحة،
-وكل سنة وأنا محظوظة إن عندي صاحبة زيك. ❤️
-</p>
-
-<p>
-وعقبال 100 سنة حلوة…
-100 سنة ضحك وفرح ونجاح وذكريات وأيام أجمل من اللي فاتت. ✨
-</p>
-
-</div>
-
-<div class="signature">
-بحبك يا سارة ❤️
-<br>
-إسراء
-</div>
-
-<button class="btn" onclick="showEverything()">
-✨ كملي المفاجأة
-</button>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     3. SONG
-========================= -->
+<!-- MUSIC -->
 
 <section class="music hidden" id="music">
 
-<div class="section-title">
-🎵 أغنيتنا
-</div>
+    <h2 class="section-title">
+        الأغنية اللي ليها مكان خاص 🎵
+    </h2>
 
-<p class="section-text">
-سبحانه من خلق وسوى ❤️
-</p>
+    <p class="section-subtitle">
+        شغّلي الأغنية وخلي الذكريات تبدأ ❤️
+    </p>
 
-<div class="audio-box">
+    <div class="music-card">
 
-<audio controls loop>
-<source src="song.mp3" type="audio/mpeg">
-متصفحك لا يدعم تشغيل الصوت.
-</audio>
+        <div class="music-icon">
+            🎶
+        </div>
 
-</div>
+        <h3>
+            سبحانه من خلق وسوى
+        </h3>
+
+        <p>
+            أغنية خاصة لذكرياتنا الجميلة
+        </p>
+
+        <audio controls loop>
+            <source src="song.mp3" type="audio/mpeg">
+            المتصفح لا يدعم تشغيل الصوت.
+        </audio>
+
+    </div>
 
 </section>
 
 
-<!-- =========================
-     4. 33 THINGS
-========================= -->
+<!-- 33 REASONS -->
 
 <section class="reasons hidden" id="reasons">
 
-<div class="reasons-header">
+    <h2 class="section-title">
+        33 حاجة بحبها في سارة ❤️
+    </h2>
 
-<div class="section-title">
-33 حاجة بحبها في سارة ❤️
-</div>
+    <p class="section-subtitle">
+        33 سبب من أسباب كتير تخليني أقول إن وجودك في حياتي نعمة ✨
+    </p>
 
-<p class="section-text">
-عشان 33 سنة… لازم يكونوا 33 سبب ✨
-</p>
+    <div class="reasons-grid">
 
-</div>
+        <div class="reason"><div class="reason-number">01</div><div class="reason-text">طيبة قلبك ❤️</div></div>
+        <div class="reason"><div class="reason-number">02</div><div class="reason-text">ضحكتك اللي بتفرّحني</div></div>
+        <div class="reason"><div class="reason-number">03</div><div class="reason-text">جدعنتك معايا</div></div>
+        <div class="reason"><div class="reason-number">04</div><div class="reason-text">وقفتك جنبي</div></div>
+        <div class="reason"><div class="reason-number">05</div><div class="reason-text">إنك بتفهميني</div></div>
+        <div class="reason"><div class="reason-number">06</div><div class="reason-text">كلامك اللي بيطمن</div></div>
+        <div class="reason"><div class="reason-number">07</div><div class="reason-text">روحك الحلوة</div></div>
+        <div class="reason"><div class="reason-number">08</div><div class="reason-text">عفويتك</div></div>
+        <div class="reason"><div class="reason-number">09</div><div class="reason-text">ذكرياتنا مع بعض</div></div>
+        <div class="reason"><div class="reason-number">10</div><div class="reason-text">ضحكنا سوا</div></div>
+        <div class="reason"><div class="reason-number">11</div><div class="reason-text">أمان وجودك</div></div>
+        <div class="reason"><div class="reason-number">12</div><div class="reason-text">إنك بتسمعيلي</div></div>
+        <div class="reason"><div class="reason-number">13</div><div class="reason-text">إنك بتسندي</div></div>
+        <div class="reason"><div class="reason-number">14</div><div class="reason-text">قلبك الأبيض</div></div>
+        <div class="reason"><div class="reason-number">15</div><div class="reason-text">حبك ليا </div></div>
+        <div class="reason"><div class="reason-number">16</div><div class="reason-text">روحك الجميلة</div></div>
+        <div class="reason"><div class="reason-number">17</div><div class="reason-text">صراحتك</div></div>
+        <div class="reason"><div class="reason-number">18</div><div class="reason-text">حنيتك</div></div>
+        <div class="reason"><div class="reason-number">19</div><div class="reason-text">الذكريات اللي بينا</div></div>
+        <div class="reason"><div class="reason-number">20</div><div class="reason-text">إنك دايماً على طبيعتك</div></div>
+        <div class="reason"><div class="reason-number">21</div><div class="reason-text">تفاصيلك الصغيرة</div></div>
+        <div class="reason"><div class="reason-number">22</div><div class="reason-text">قوة شخصيتك</div></div>
+        <div class="reason"><div class="reason-number">23</div><div class="reason-text">إصرارك</div></div>
+        <div class="reason"><div class="reason-number">24</div><div class="reason-text">طموحك</div></div>
+        <div class="reason"><div class="reason-number">25</div><div class="reason-text">حضورك الجميل</div></div>
+        <div class="reason"><div class="reason-number">26</div><div class="reason-text">إنك بتفرحي لفرحي</div></div>
+        <div class="reason"><div class="reason-number">27</div><div class="reason-text">إنك بتخافي عليا</div></div>
+        <div class="reason"><div class="reason-number">28</div><div class="reason-text">إنك بتعرفي تفرحيني</div></div>
+        <div class="reason"><div class="reason-number">29</div><div class="reason-text">كل موقف حلو بينا</div></div>
+        <div class="reason"><div class="reason-number">30</div><div class="reason-text">كل ضحكة مشتركة</div></div>
+        <div class="reason"><div class="reason-number">31</div><div class="reason-text">كل ذكرى حلوة</div></div>
+        <div class="reason"><div class="reason-number">32</div><div class="reason-text">إنك سارة ❤️</div></div>
+        <div class="reason"><div class="reason-number">33</div><div class="reason-text">ببساطة... عشان أنتِ أنتِ ❤️</div></div>
 
-<div class="reasons-grid">
-
-<div class="reason"><div class="reason-number">01</div><p>طيبة قلبك.</p></div>
-<div class="reason"><div class="reason-number">02</div><p>ضحكتك الجميلة.</p></div>
-<div class="reason"><div class="reason-number">03</div><p>جدعنتك.</p></div>
-<div class="reason"><div class="reason-number">04</div><p>إنك بتسمعي من قلبك.</p></div>
-<div class="reason"><div class="reason-number">05</div><p>إن وجودك بيطمن.</p></div>
-<div class="reason"><div class="reason-number">06</div><p>روحك الحلوة.</p></div>
-<div class="reason"><div class="reason-number">07</div><p>ذكرياتنا سوا.</p></div>
-<div class="reason"><div class="reason-number">08</div><p>الضحك اللي بينا.</p></div>
-<div class="reason"><div class="reason-number">09</div><p>إنك بتفرحي لفرح اللي بتحبيهم.</p></div>
-<div class="reason"><div class="reason-number">10</div><p>إنك دايمًا على طبيعتك.</p></div>
-<div class="reason"><div class="reason-number">11</div><p>قلبك الأبيض.</p></div>
-<div class="reason"><div class="reason-number">12</div><p>إنك بتخلي اليوم أحلى.</p></div>
-<div class="reason"><div class="reason-number">13</div><p>اهتمامك بالتفاصيل.</p></div>
-<div class="reason"><div class="reason-number">14</div><p>كلامك اللي بيهون الزعل.</p></div>
-<div class="reason"><div class="reason-number">15</div><p>إنك صاحبة يتسند عليها.</p></div>
-<div class="reason"><div class="reason-number">16</div><p>إنك بتفهمي من غير كلام كتير.</p></div>
-<div class="reason"><div class="reason-number">17</div><p>روحك المرحة.</p></div>
-<div class="reason"><div class="reason-number">18</div><p>إنك بتخلي الذكريات أحلى.</p></div>
-<div class="reason"><div class="reason-number">19</div><p>صراحتك.</p></div>
-<div class="reason"><div class="reason-number">20</div><p>حنانك.</p></div>
-<div class="reason"><div class="reason-number">21</div><p>إنك موجودة وقت اللزوم.</p></div>
-<div class="reason"><div class="reason-number">22</div><p>قوة شخصيتك.</p></div>
-<div class="reason"><div class="reason-number">23</div><p>إنك بتشجعي اللي حواليكي.</p></div>
-<div class="reason"><div class="reason-number">24</div><p>فرحتك من قلبك.</p></div>
-<div class="reason"><div class="reason-number">25</div><p>عفويتك.</p></div>
-<div class="reason"><div class="reason-number">26</div><p>كل ضحكة بينا.</p></div>
-<div class="reason"><div class="reason-number">27</div><p>كل موقف وقفنا فيه جنب بعض.</p></div>
-<div class="reason"><div class="reason-number">28</div><p>كل صورة جمعتنا.</p></div>
-<div class="reason"><div class="reason-number">29</div><p>كل حكاية بينا.</p></div>
-<div class="reason"><div class="reason-number">30</div><p>إنك ببساطة سارة.</p></div>
-<div class="reason"><div class="reason-number">31</div><p>وجودك في حياتي نعمة.</p></div>
-<div class="reason"><div class="reason-number">32</div><p>صداقتنا.</p></div>
-<div class="reason"><div class="reason-number">33</div><p>لأنك من أغلى الناس على قلبي ❤️</p></div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     5. MEMORIES
-========================= -->
+<!-- MEMORIES -->
 
 <section class="memories hidden" id="memories">
 
-<div class="section-title">
-📸 ذكرياتنا
-</div>
+    <h2 class="section-title">
+        ذكرياتنا ❤️
+    </h2>
 
-<p class="section-text">
-20 صورة من أجمل لحظاتنا ❤️
-</p>
+    <p class="section-subtitle">
+        كل صورة هنا وراها حكاية وذكرى جميلة ✨
+    </p>
 
-<div class="gallery">
+    <div class="gallery">
 
-<div class="photo"><img src="photo1.jpg" alt="Memory 1"></div>
-<div class="photo"><img src="photo2.jpg" alt="Memory 2"></div>
-<div class="photo"><img src="photo3.jpg" alt="Memory 3"></div>
-<div class="photo"><img src="photo4.jpg" alt="Memory 4"></div>
+        <div class="photo">
+            <img src="Messenger_creation_BF0EAC21-3017-49E8-8406-626323BE15C1.jpeg" alt="Memory 1">
+        </div>
 
-<div class="photo"><img src="photo5.jpg" alt="Memory 5"></div>
-<div class="photo"><img src="photo6.jpg" alt="Memory 6"></div>
-<div class="photo"><img src="photo7.jpg" alt="Memory 7"></div>
-<div class="photo"><img src="photo8.jpg" alt="Memory 8"></div>
+        <div class="photo">
+            <img src="IMG_9684.JPG" alt="Memory 2">
+        </div>
 
-<div class="photo"><img src="photo9.jpg" alt="Memory 9"></div>
-<div class="photo"><img src="photo10.jpg" alt="Memory 10"></div>
-<div class="photo"><img src="photo11.jpg" alt="Memory 11"></div>
-<div class="photo"><img src="photo12.jpg" alt="Memory 12"></div>
+        <div class="photo">
+            <img src="IMG_8120.JPG" alt="Memory 3">
+        </div>
 
-<div class="photo"><img src="photo13.jpg" alt="Memory 13"></div>
-<div class="photo"><img src="photo14.jpg" alt="Memory 14"></div>
-<div class="photo"><img src="photo15.jpg" alt="Memory 15"></div>
-<div class="photo"><img src="photo16.jpg" alt="Memory 16"></div>
+        <div class="photo">
+            <img src="IMG_7546.HEIC" alt="Memory 4">
+        </div>
 
-<div class="photo"><img src="photo17.jpg" alt="Memory 17"></div>
-<div class="photo"><img src="photo18.jpg" alt="Memory 18"></div>
-<div class="photo"><img src="photo19.jpg" alt="Memory 19"></div>
-<div class="photo"><img src="photo20.jpg" alt="Memory 20"></div>
+        <div class="photo">
+            <img src="IMG_6253.JPG" alt="Memory 5">
+        </div>
 
-</div>
+        <div class="photo">
+            <img src="IMG_1716.JPG" alt="Memory 6">
+        </div>
+
+        <div class="photo">
+            <img src="IMG-20251117-WA0014.jpg" alt="Memory 7">
+        </div>
+
+        <div class="photo">
+            <img src="20260730_165633.jpg" alt="Memory 8">
+        </div>
+
+        <div class="photo">
+            <img src="20260425_214045.jpg" alt="Memory 9">
+        </div>
+
+        <div class="photo">
+            <img src="20260309_172141.jpg" alt="Memory 10">
+        </div>
+
+        <div class="photo">
+            <img src="20260309_153032.heic" alt="Memory 11">
+        </div>
+
+        <div class="photo">
+            <img src="20251219_152504.jpg" alt="Memory 12">
+        </div>
+
+        <div class="photo">
+            <img src="20251127_171550.heic" alt="Memory 13">
+        </div>
+
+        <div class="photo">
+            <img src="20251016_222922.jpg" alt="Memory 14">
+        </div>
+
+        <div class="photo">
+            <img src="20250610_001417_IMG_0970.JPG" alt="Memory 15">
+        </div>
+
+        <div class="photo">
+            <img src="20250610_001333_IMG_0968.JPG" alt="Memory 16">
+        </div>
+
+        <div class="photo">
+            <img src="20250420_190932_IMG_9291.JPG" alt="Memory 17">
+        </div>
+
+        <div class="photo">
+            <img src="20250331_075957_IMG_7753.JPG" alt="Memory 18">
+        </div>
+
+        <div class="photo">
+            <img src="Messenger_creation_BF0EAC21-3017-49E8-8406-626323BE15C1.jpeg" alt="Memory 19">
+        </div>
+
+        <div class="photo">
+            <img src="IMG_9684.JPG" alt="Memory 20">
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- =========================
-     6. STORY
-========================= -->
+<!-- STORY -->
 
 <section class="story hidden" id="story">
 
-<div class="section-title">
-💕 حكايتنا
-</div>
+    <h2 class="section-title">
+        حكايتنا ✨
+    </h2>
 
-<p class="section-text">
-ذكريات صغيرة عملت حكاية كبيرة.
-</p>
+    <p class="section-subtitle">
+        مش مجرد صور... دي سنين من الذكريات ❤️
+    </p>
 
-<div class="story-box">
+    <div class="story-card">
 
-<div class="story-item">
-<h3>البداية</h3>
-<p>
-من أول ما عرفنا بعض بدأت حكايات وذكريات مكنش حد يعرف إنها هتبقى مهمة بالشكل ده.
-</p>
-</div>
+        <div class="story-item">
+            <h3>أول الذكريات</h3>
+            <p>
+                كل بداية كان وراها لحظة صغيرة،
+                بس مع الوقت اللحظات الصغيرة دي بقت ذكريات كبيرة وغالية.
+            </p>
+        </div>
 
-<div class="story-item">
-<h3>الضحك</h3>
-<p>
-مواقف كتير يمكن مكنتش تضحك حد غيرنا، لكن لحد دلوقتي مجرد ما نفتكرها بنضحك.
-</p>
-</div>
+        <div class="story-item">
+            <h3>ضحك كتير</h3>
+            <p>
+                في بينا ضحك ومواقف يمكن وقتها كانت عادية،
+                لكن لما نفتكرها دلوقتي بنبتسم من قلبنا.
+            </p>
+        </div>
 
-<div class="story-item">
-<h3>السند</h3>
-<p>
-وفي أوقات كتير كان وجودك لوحده كفاية يخلي أي حاجة صعبة تعدي.
-</p>
-</div>
+        <div class="story-item">
+            <h3>وقت صعب</h3>
+            <p>
+                والصداقة الحقيقية مش بس في الفرح،
+                هي كمان في وقت الزعل والتعب،
+                لما نلاقي حد واقف جنبنا بجد.
+            </p>
+        </div>
 
-<div class="story-item">
-<h3>والحكاية لسه مستمرة</h3>
-<p>
-لسه في صور كتير، وضحكات كتير، وأيام حلوة مستنيانا. ❤️
-</p>
-</div>
+        <div class="story-item">
+            <h3>والحكاية لسه مكملة</h3>
+            <p>
+                لسه في صور كتير هتتصور،
+                وضحك كتير هيتعاش،
+                وذكريات جديدة هتتكتب.
+            </p>
+        </div>
 
-</div>
+    </div>
 
 </section>
 
 
-<!-- =========================
-     7. FINAL
-========================= -->
+<!-- FINAL -->
 
 <section class="final">
 
-<div>
+    <h2>
+        كل سنة وأنتِ أجمل حكاية ❤️
+    </h2>
 
-<h2>
-For Sara ❤️
-</h2>
+    <p>
+        أتمنى السنة الجديدة من عمرك تكون مليانة
+        فرحة ونجاح وراحة بال وحاجات حلوة كتير،
+        وتفضلي دايماً بنفس قلبك وروحك الجميلة.
+    </p>
 
-<p>
-كل سنة وإنتِ طيبة يا سارة 🎂
-<br>
-وعقبال 100 سنة فرح وسعادة ونجاح.
-<br><br>
-ودي مش نهاية الذكريات…
-دي بداية ذكريات جديدة. ✨
-</p>
-
-<div class="final-sign">
-— إسراء ❤️
-</div>
-
-</div>
+    <div class="from">
+        بحبك يا سارة ❤️
+        <br>
+        من إسراء 🎂✨
+    </div>
 
 </section>
 
 
-<!-- =========================
-     PHOTO VIEWER
-========================= -->
+<!-- LIGHTBOX -->
 
 <div class="lightbox" id="lightbox">
 
-<div class="close" onclick="closeImage()">×</div>
+    <div class="close" onclick="closeImage()">×</div>
 
-<img id="bigImage" src="" alt="Photo">
+    <img id="bigImage" src="" alt="Memory">
 
 </div>
 
 
 <script>
 
-/* ===== OPEN SURPRISE ===== */
+/* فتح المفاجأة */
 
 function openSurprise(){
 
-    var surprise =
-    document.getElementById("surprise");
+    const surprise = document.getElementById("surprise");
 
     surprise.classList.remove("hidden");
 
-    surprise.scrollIntoView({
-        behavior:"smooth"
-    });
-
     createHearts();
+
+    setTimeout(function(){
+
+        surprise.scrollIntoView({
+            behavior:"smooth"
+        });
+
+    },100);
+
 }
 
 
-/* ===== SHOW ALL ===== */
+/* إظهار باقي الموقع */
 
 function showEverything(){
 
-    document.getElementById("music")
-    .classList.remove("hidden");
+    document.getElementById("music").classList.remove("hidden");
+    document.getElementById("reasons").classList.remove("hidden");
+    document.getElementById("memories").classList.remove("hidden");
+    document.getElementById("story").classList.remove("hidden");
 
-    document.getElementById("reasons")
-    .classList.remove("hidden");
+    createHearts();
 
-    document.getElementById("memories")
-    .classList.remove("hidden");
+    setTimeout(function(){
 
-    document.getElementById("story")
-    .classList.remove("hidden");
+        document.getElementById("music").scrollIntoView({
+            behavior:"smooth"
+        });
 
-    document.getElementById("music")
-    .scrollIntoView({
-        behavior:"smooth"
-    });
+    },100);
+
 }
 
 
-/* ===== HEARTS ===== */
+/* القلوب */
 
 function createHearts(){
 
-    var symbols=[
-        "❤️",
-        "💕",
-        "💗",
-        "♡",
-        "✨"
-    ];
+    for(let i=0;i<25;i++){
 
-    var area=
-    document.getElementById("surprise");
-
-    for(var i=0;i<30;i++){
-
-        var heart=
-        document.createElement("div");
+        let heart=document.createElement("div");
 
         heart.className="heart";
 
-        heart.innerHTML=
-        symbols[
-            Math.floor(
-                Math.random()*symbols.length
-            )
-        ];
+        heart.innerHTML=["❤️","💕","💗","💖","✨"][Math.floor(Math.random()*5)];
 
-        heart.style.left=
-        Math.random()*100+"%";
+        heart.style.left=Math.random()*100+"vw";
 
-        heart.style.animationDuration=
-        (4+Math.random()*4)+"s";
+        heart.style.animationDuration=(3+Math.random()*4)+"s";
 
-        area.appendChild(heart);
+        heart.style.fontSize=(18+Math.random()*25)+"px";
+
+        document.body.appendChild(heart);
 
         setTimeout(function(){
-            if(heart.parentNode){
-                heart.parentNode.removeChild(heart);
-            }
-        },8000);
+
+            heart.remove();
+
+        },7000);
 
     }
-}
-
-
-/* ===== PHOTO VIEWER ===== */
-
-var photos=
-document.querySelectorAll(".photo img");
-
-for(var i=0;i<photos.length;i++){
-
-    photos[i].onclick=function(){
-
-        document
-        .getElementById("bigImage")
-        .src=this.src;
-
-        document
-        .getElementById("lightbox")
-        .classList.add("show");
-
-    };
 
 }
 
 
-/* ===== CLOSE PHOTO ===== */
+/* تكبير الصور */
+
+const photos=document.querySelectorAll(".photo img");
+
+const lightbox=document.getElementById("lightbox");
+
+const bigImage=document.getElementById("bigImage");
+
+photos.forEach(function(photo){
+
+    photo.addEventListener("click",function(){
+
+        bigImage.src=this.src;
+
+        lightbox.classList.add("show");
+
+    });
+
+});
+
 
 function closeImage(){
 
-    document
-    .getElementById("lightbox")
-    .classList.remove("show");
+    lightbox.classList.remove("show");
+
+    bigImage.src="";
 
 }
 
 
-/* ===== CLICK OUTSIDE PHOTO ===== */
+/* إغلاق الصورة عند الضغط خارجها */
 
-document
-.getElementById("lightbox")
-.addEventListener("click",function(e){
+lightbox.addEventListener("click",function(e){
 
-    if(e.target===this){
+    if(e.target===lightbox){
+
         closeImage();
+
     }
 
 });
 
 
+/* زر ESC */
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key==="Escape"){
+
+        closeImage();
+
+    }
+
+});
+
 </script>
 
 </body>
-   </html>
+        </html>
