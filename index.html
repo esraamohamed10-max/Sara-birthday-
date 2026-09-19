@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>For Sara ❤️ | Happy 33rd Birthday</title>
+<title>Happy Birthday Sara ❤️</title>
 
 <style>
-
-/* =========================
-   FONTS
-========================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
-
-
-/* =========================
-   GENERAL
-========================= */
-
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 html{
@@ -31,942 +18,464 @@ html{
 }
 
 body{
-    font-family:'Cairo',sans-serif;
-    background:#f8f3ef;
-    color:#443638;
+    font-family:Arial, Tahoma, sans-serif;
+    background:#faf5f2;
+    color:#49383b;
     overflow-x:hidden;
-}
-
-button{
-    font-family:inherit;
 }
 
 .hidden{
     display:none !important;
 }
 
-
-/* =========================
-   MUSIC PLAYER
-========================= */
-
-.music-player{
-    position:fixed;
-    top:20px;
-    left:20px;
-    z-index:1000;
+button{
+    font-family:inherit;
 }
 
-.music-button{
-    width:52px;
-    height:52px;
-    border-radius:50%;
-    border:1px solid rgba(255,255,255,.5);
-    background:rgba(67,48,51,.9);
-    color:white;
-    cursor:pointer;
-    font-size:21px;
-    box-shadow:0 8px 25px rgba(40,25,25,.2);
-    transition:.3s;
-}
-
-.music-button:hover{
-    transform:scale(1.08);
-}
-
-
-/* =========================
-   HERO
-========================= */
+/* ===== HERO ===== */
 
 .hero{
     min-height:100vh;
-    position:relative;
-
     display:flex;
-    align-items:center;
     justify-content:center;
-
+    align-items:center;
     text-align:center;
-
-    overflow:hidden;
-
+    position:relative;
+    padding:30px 20px;
     background:
-    radial-gradient(circle at 15% 20%,rgba(185,130,110,.16),transparent 30%),
-    radial-gradient(circle at 85% 75%,rgba(170,105,125,.13),transparent 30%),
-    linear-gradient(135deg,#faf6f2,#f4e7e2);
+        radial-gradient(circle at 20% 20%,#f4d9d7 0,transparent 30%),
+        radial-gradient(circle at 80% 80%,#ead2c6 0,transparent 30%),
+        linear-gradient(135deg,#fffaf7,#f3e4df);
 }
 
-.hero::before{
+.hero:before{
     content:"";
     position:absolute;
-    inset:25px;
-
-    border:1px solid rgba(130,88,75,.18);
+    inset:18px;
+    border:1px solid rgba(130,90,80,.2);
 }
 
 .hero-content{
     position:relative;
-    z-index:3;
-
-    max-width:900px;
-
-    padding:50px 25px;
+    z-index:2;
+    max-width:700px;
 }
 
-.eyebrow{
-    font-size:12px;
-    letter-spacing:5px;
-    color:#9a7163;
-
-    margin-bottom:30px;
+.small-text{
+    color:#9b7468;
+    font-size:13px;
+    letter-spacing:3px;
+    margin-bottom:25px;
 }
 
 .hero-photo{
-    width:235px;
-    height:235px;
-
+    width:210px;
+    height:210px;
     object-fit:cover;
-
     border-radius:50%;
-
-    padding:7px;
-
-    background:white;
-
-    box-shadow:
-    0 25px 70px rgba(70,45,40,.2),
-    0 0 0 1px rgba(140,95,80,.15);
-
-    margin-bottom:30px;
+    border:7px solid white;
+    box-shadow:0 20px 55px rgba(70,45,40,.2);
+    margin-bottom:25px;
 }
 
 .hero h1{
-    font-family:'Playfair Display',serif;
-
-    font-size:70px;
-    line-height:1.1;
-
-    color:#463437;
-
-    margin-bottom:10px;
-}
-
-.hero h1 span{
-    color:#a86e78;
-}
-
-.hero-subtitle{
-    color:#765f63;
-    font-size:20px;
-
+    font-family:Georgia,serif;
+    font-size:55px;
+    color:#49363a;
     margin-bottom:12px;
 }
 
-.hero-age{
-    font-family:'Playfair Display',serif;
-
-    font-size:24px;
-    color:#a47b6d;
-
-    letter-spacing:4px;
-
-    margin-bottom:35px;
+.hero h1 span{
+    color:#aa6d78;
 }
 
+.hero p{
+    font-size:19px;
+    color:#765f63;
+    line-height:1.8;
+}
 
-/* =========================
-   BUTTON
-========================= */
+.age{
+    margin:20px 0 30px;
+    font-family:Georgia,serif;
+    color:#a57b6e;
+    font-size:23px;
+    letter-spacing:5px;
+}
 
-.luxury-btn{
-    border:1px solid #a98272;
+/* ===== BUTTON ===== */
 
-    background:#493639;
+.btn{
+    border:0;
+    background:#4b383b;
     color:white;
-
-    padding:16px 40px;
-
-    border-radius:4px;
-
-    font-size:16px;
-
+    padding:15px 32px;
+    border-radius:5px;
+    font-size:17px;
     cursor:pointer;
-
-    box-shadow:0 12px 35px rgba(60,40,35,.18);
-
-    transition:.4s;
+    margin-top:28px;
+    box-shadow:0 12px 30px rgba(50,35,35,.2);
+    transition:.3s;
 }
 
-.luxury-btn:hover{
-    background:#a66c77;
-
+.btn:hover{
+    background:#aa6d78;
     transform:translateY(-3px);
-
-    box-shadow:0 18px 45px rgba(70,40,45,.22);
 }
 
-
-/* =========================
-   DECORATIONS
-========================= */
-
-.decor{
-    position:absolute;
-    color:#b9897b;
-
-    opacity:.45;
-
-    animation:floatDecor 5s ease-in-out infinite;
-}
-
-.decor.one{
-    top:15%;
-    left:12%;
-    font-size:25px;
-}
-
-.decor.two{
-    top:30%;
-    right:10%;
-    font-size:18px;
-    animation-delay:1s;
-}
-
-.decor.three{
-    bottom:15%;
-    left:18%;
-    font-size:20px;
-    animation-delay:2s;
-}
-
-.decor.four{
-    bottom:20%;
-    right:15%;
-    font-size:27px;
-    animation-delay:1.5s;
-}
-
-@keyframes floatDecor{
-    0%,100%{
-        transform:translateY(0);
-    }
-
-    50%{
-        transform:translateY(-15px);
-    }
-}
-
-
-/* =========================
-   SURPRISE
-========================= */
+/* ===== SURPRISE ===== */
 
 .surprise{
     min-height:100vh;
-
+    padding:80px 18px;
     display:flex;
     justify-content:center;
     align-items:center;
-
-    padding:100px 20px;
-
     position:relative;
-
     overflow:hidden;
-
-    background:
-    radial-gradient(circle at center,rgba(255,255,255,.9),rgba(242,224,218,.9)),
-    #f5e8e3;
+    background:linear-gradient(135deg,#f8ebe7,#fff8f5);
 }
 
 .message-card{
     width:100%;
-    max-width:920px;
-
-    padding:65px 60px;
-
+    max-width:850px;
+    background:rgba(255,255,255,.92);
+    padding:45px 35px;
+    border-radius:18px;
+    box-shadow:0 25px 70px rgba(70,45,40,.15);
+    border:1px solid #eadbd5;
     position:relative;
-    z-index:10;
-
-    background:rgba(255,255,255,.78);
-
-    backdrop-filter:blur(18px);
-
-    border:1px solid rgba(160,115,100,.2);
-
-    box-shadow:
-    0 30px 100px rgba(75,45,40,.15);
-
-    animation:messageIn 1s ease;
+    z-index:5;
 }
 
-.message-card::before{
-    content:"";
-
-    position:absolute;
-
-    inset:15px;
-
-    border:1px solid rgba(160,115,100,.14);
-
-    pointer-events:none;
-}
-
-@keyframes messageIn{
-
-    from{
-        opacity:0;
-        transform:translateY(40px) scale(.97);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0) scale(1);
-    }
-
-}
-
-.message-head{
+.message-title{
     text-align:center;
-
-    position:relative;
-    z-index:2;
-
-    margin-bottom:40px;
+    margin-bottom:35px;
 }
 
-.message-head .age{
-    font-family:'Playfair Display',serif;
-
-    font-size:80px;
-
-    color:#b48175;
-
-    line-height:1;
+.message-number{
+    font-family:Georgia,serif;
+    font-size:70px;
+    color:#b27f73;
 }
 
-.message-head h2{
-    font-family:'Playfair Display',serif;
-
-    font-size:40px;
-
-    color:#493638;
-
-    margin-top:10px;
+.message-title h2{
+    font-family:Georgia,serif;
+    color:#4b383b;
+    font-size:32px;
+    line-height:1.5;
 }
 
 .message{
-    position:relative;
-    z-index:2;
-
-    color:#5d4c4e;
-
     font-size:17px;
-
-    line-height:2.2;
-
-    text-align:right;
+    line-height:2.1;
+    color:#5e4d50;
 }
 
 .message p{
-    margin-bottom:24px;
+    margin-bottom:22px;
 }
 
 .message strong{
-    color:#a56672;
+    color:#a86672;
 }
 
 .signature{
     text-align:center;
-
-    position:relative;
-    z-index:2;
-
-    margin-top:45px;
-
-    font-family:'Playfair Display',serif;
-
-    font-size:30px;
-
-    color:#a36d77;
+    color:#a86672;
+    font-family:Georgia,serif;
+    font-size:28px;
+    margin-top:35px;
 }
 
-.message-button{
-    text-align:center;
+/* ===== PARTICLES ===== */
 
-    margin-top:40px;
-
-    position:relative;
-    z-index:2;
-}
-
-
-/* =========================
-   PARTICLES
-========================= */
-
-.particle{
+.heart{
     position:absolute;
-
-    bottom:-40px;
-
-    pointer-events:none;
-
-    color:#b47d83;
-
-    animation:particleUp 6s linear forwards;
-
-    z-index:3;
+    bottom:-30px;
+    color:#b87883;
+    font-size:25px;
+    animation:up 6s linear forwards;
+    z-index:2;
 }
 
-@keyframes particleUp{
-
-    0%{
+@keyframes up{
+    from{
         transform:translateY(0) rotate(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-110vh) rotate(360deg);
         opacity:0;
     }
-
-    15%{
-        opacity:.8;
-    }
-
-    100%{
-        transform:translateY(-110vh) rotate(300deg);
-        opacity:0;
-    }
-
 }
 
+/* ===== MUSIC ===== */
 
-/* =========================
-   MUSIC SECTION
-========================= */
-
-.music-section{
-    padding:90px 20px;
-
+.music{
+    padding:80px 20px;
     text-align:center;
-
-    background:#f9f4f0;
-}
-
-.section-label{
-    font-size:12px;
-
-    letter-spacing:4px;
-
-    color:#a27b6d;
-
-    margin-bottom:18px;
+    background:#faf6f3;
 }
 
 .section-title{
-    font-family:'Playfair Display',serif;
-
-    font-size:50px;
-
-    color:#493638;
-
+    font-family:Georgia,serif;
+    font-size:42px;
+    color:#4b383b;
     margin-bottom:15px;
 }
 
 .section-text{
-    color:#776567;
-
+    color:#756266;
     font-size:17px;
-
-    margin-bottom:35px;
+    margin-bottom:30px;
 }
 
 .audio-box{
-    max-width:650px;
-
+    max-width:600px;
     margin:auto;
-
-    padding:28px;
-
+    padding:25px;
     background:white;
-
-    border:1px solid rgba(160,110,95,.16);
-
-    box-shadow:0 15px 50px rgba(70,45,40,.1);
-}
-
-.audio-box p{
-    margin-bottom:18px;
-
-    color:#745d61;
+    border-radius:15px;
+    box-shadow:0 12px 35px rgba(70,45,40,.1);
 }
 
 audio{
     width:100%;
 }
 
-
-/* =========================
-   33 THINGS
-========================= */
+/* ===== 33 REASONS ===== */
 
 .reasons{
-    padding:110px 20px;
-
-    background:
-    linear-gradient(135deg,#f4e7e2,#fbf7f4);
+    padding:90px 20px;
+    background:#f2e5df;
 }
 
 .reasons-header{
     text-align:center;
-
-    margin-bottom:55px;
+    margin-bottom:45px;
 }
 
 .reasons-grid{
-    max-width:1100px;
-
+    max-width:1000px;
     margin:auto;
-
     display:grid;
-
     grid-template-columns:repeat(3,1fr);
-
-    gap:18px;
+    gap:15px;
 }
 
 .reason{
-    background:rgba(255,255,255,.78);
-
-    border:1px solid rgba(160,110,95,.14);
-
-    padding:28px 22px;
-
-    min-height:150px;
-
-    box-shadow:0 10px 30px rgba(70,45,40,.07);
-
-    transition:.4s;
-}
-
-.reason:hover{
-    transform:translateY(-5px);
-
-    box-shadow:0 18px 40px rgba(70,45,40,.13);
+    background:white;
+    padding:22px;
+    min-height:130px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(70,45,40,.08);
 }
 
 .reason-number{
-    font-family:'Playfair Display',serif;
-
-    font-size:32px;
-
-    color:#b17c71;
-
+    font-family:Georgia,serif;
+    font-size:28px;
+    color:#ad786e;
     margin-bottom:8px;
 }
 
 .reason p{
     color:#5f5052;
-
-    line-height:1.8;
-
-    font-size:15px;
+    line-height:1.7;
 }
 
-
-/* =========================
-   MEMORIES
-========================= */
+/* ===== GALLERY ===== */
 
 .memories{
-    padding:110px 20px;
-
+    padding:90px 15px;
+    background:#fcf9f7;
     text-align:center;
-
-    background:#fbf8f5;
-}
-
-.memories-header{
-    margin-bottom:55px;
-}
-
-.memories-header h2{
-    font-family:'Playfair Display',serif;
-
-    font-size:52px;
-
-    color:#493638;
-
-    margin-bottom:12px;
-}
-
-.memories-header p{
-    color:#79696b;
-
-    font-size:17px;
 }
 
 .gallery{
-    max-width:1150px;
-
-    margin:auto;
-
+    max-width:1100px;
+    margin:45px auto 0;
     display:grid;
-
     grid-template-columns:repeat(4,1fr);
-
-    gap:18px;
+    gap:15px;
 }
 
 .photo{
     background:white;
-
     padding:6px;
-
-    box-shadow:0 12px 35px rgba(70,45,40,.1);
-
-    overflow:hidden;
-
+    border-radius:10px;
+    box-shadow:0 10px 30px rgba(70,45,40,.1);
     cursor:pointer;
-
-    transition:.45s;
-}
-
-.photo:nth-child(2),
-.photo:nth-child(7),
-.photo:nth-child(12),
-.photo:nth-child(17){
-    transform:translateY(25px);
-}
-
-.photo:hover{
-    transform:translateY(-6px) scale(1.02);
-
-    box-shadow:0 22px 50px rgba(70,45,40,.18);
+    overflow:hidden;
 }
 
 .photo img{
-    width:100%;
-
-    height:270px;
-
-    object-fit:cover;
-
     display:block;
-
-    transition:.6s;
+    width:100%;
+    height:250px;
+    object-fit:cover;
+    border-radius:6px;
+    transition:.4s;
 }
 
 .photo:hover img{
     transform:scale(1.05);
 }
 
+/* ===== STORY ===== */
 
-/* =========================
-   TIMELINE
-========================= */
-
-.timeline-section{
-    padding:110px 20px;
-
-    background:#f3e6e1;
-
+.story{
+    padding:90px 20px;
     text-align:center;
+    background:#f1e3de;
 }
 
-.timeline{
-    max-width:850px;
-
-    margin:55px auto 0;
-
-    position:relative;
+.story-box{
+    max-width:750px;
+    margin:40px auto 0;
 }
 
-.timeline::before{
-    content:"";
-
-    position:absolute;
-
-    top:0;
-    bottom:0;
-
-    right:50%;
-
-    width:1px;
-
-    background:#b99184;
-}
-
-.timeline-item{
-    width:50%;
-
-    padding:20px 35px;
-
-    position:relative;
-
+.story-item{
+    background:white;
+    padding:25px;
+    margin-bottom:18px;
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(70,45,40,.08);
     text-align:right;
 }
 
-.timeline-item:nth-child(odd){
-    margin-left:50%;
-}
-
-.timeline-item:nth-child(even){
-    text-align:left;
-}
-
-.timeline-dot{
-    width:12px;
-    height:12px;
-
-    border-radius:50%;
-
-    background:#a96f78;
-
-    position:absolute;
-
-    top:30px;
-
-    right:-6px;
-}
-
-.timeline-item:nth-child(even) .timeline-dot{
-    left:-6px;
-    right:auto;
-}
-
-.timeline-card{
-    background:white;
-
-    padding:25px;
-
-    box-shadow:0 10px 30px rgba(70,45,40,.08);
-}
-
-.timeline-card h3{
-    font-family:'Playfair Display',serif;
-
+.story-item h3{
+    color:#a66b75;
+    font-family:Georgia,serif;
     font-size:24px;
-
-    color:#8f6069;
-
     margin-bottom:8px;
 }
 
-.timeline-card p{
-    color:#645456;
-
+.story-item p{
+    color:#615154;
     line-height:1.8;
 }
 
-
-/* =========================
-   LIGHTBOX
-========================= */
-
-.lightbox{
-    position:fixed;
-
-    inset:0;
-
-    background:rgba(25,18,18,.94);
-
-    display:none;
-
-    justify-content:center;
-
-    align-items:center;
-
-    z-index:5000;
-
-    padding:25px;
-}
-
-.lightbox.active{
-    display:flex;
-}
-
-.lightbox img{
-    max-width:92%;
-
-    max-height:88vh;
-
-    object-fit:contain;
-
-    box-shadow:0 25px 80px rgba(0,0,0,.5);
-}
-
-.close{
-    position:absolute;
-
-    top:20px;
-    right:30px;
-
-    color:white;
-
-    font-size:40px;
-
-    cursor:pointer;
-}
-
-
-/* =========================
-   FINAL
-========================= */
+/* ===== FINAL ===== */
 
 .final{
-    min-height:80vh;
-
+    min-height:65vh;
     display:flex;
-
-    align-items:center;
-
     justify-content:center;
-
+    align-items:center;
     text-align:center;
-
-    padding:90px 20px;
-
-    background:
-    linear-gradient(135deg,#ead8d1,#f8eeea,#e7d9d3);
-}
-
-.final-content{
-    max-width:800px;
+    padding:70px 20px;
+    background:linear-gradient(135deg,#ead8d1,#fff4f0,#e8d8d2);
 }
 
 .final h2{
-    font-family:'Playfair Display',serif;
-
-    font-size:65px;
-
-    color:#493638;
-
+    font-family:Georgia,serif;
+    font-size:55px;
+    color:#4b383b;
     margin-bottom:25px;
 }
 
 .final p{
     font-size:19px;
-
     line-height:2;
-
-    color:#675456;
+    color:#665457;
 }
 
 .final-sign{
-    margin-top:35px;
-
-    font-family:'Playfair Display',serif;
-
-    font-size:32px;
-
-    color:#9c6872;
+    font-family:Georgia,serif;
+    color:#a56a75;
+    font-size:28px;
+    margin-top:25px;
 }
 
+/* ===== LIGHTBOX ===== */
 
-/* =========================
-   MOBILE
-========================= */
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(20,15,15,.93);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    padding:20px;
+}
+
+.lightbox.show{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:90vh;
+    object-fit:contain;
+}
+
+.close{
+    position:absolute;
+    top:15px;
+    right:25px;
+    color:white;
+    font-size:40px;
+    cursor:pointer;
+}
+
+/* ===== MOBILE ===== */
 
 @media(max-width:800px){
 
-    .hero::before{
-        inset:14px;
+    .hero h1{
+        font-size:40px;
     }
 
     .hero-photo{
-        width:185px;
-        height:185px;
-    }
-
-    .hero h1{
-        font-size:43px;
-    }
-
-    .hero-subtitle{
-        font-size:16px;
+        width:175px;
+        height:175px;
     }
 
     .message-card{
-        padding:45px 25px;
+        padding:35px 20px;
     }
 
-    .message-head .age{
-        font-size:60px;
+    .message-number{
+        font-size:55px;
     }
 
-    .message-head h2{
-        font-size:29px;
+    .message-title h2{
+        font-size:26px;
     }
 
     .message{
         font-size:15px;
-
         line-height:2;
     }
 
-    .section-title,
-    .memories-header h2{
-        font-size:38px;
+    .section-title{
+        font-size:34px;
     }
 
     .reasons-grid{
         grid-template-columns:repeat(2,1fr);
-
-        gap:12px;
     }
 
     .gallery{
         grid-template-columns:repeat(2,1fr);
-
         gap:10px;
     }
 
-    .photo:nth-child(2),
-    .photo:nth-child(7),
-    .photo:nth-child(12),
-    .photo:nth-child(17){
-        transform:none;
-    }
-
     .photo img{
-        height:180px;
-    }
-
-    .timeline::before{
-        right:10px;
-    }
-
-    .timeline-item,
-    .timeline-item:nth-child(odd){
-        width:100%;
-
-        margin:0;
-
-        padding:20px 40px 20px 0;
-
-        text-align:right;
-    }
-
-    .timeline-dot,
-    .timeline-item:nth-child(even) .timeline-dot{
-        right:4px;
-        left:auto;
+        height:170px;
     }
 
     .final h2{
-        font-size:45px;
+        font-size:42px;
     }
-
 }
 
 @media(max-width:450px){
 
     .hero h1{
-        font-size:37px;
-    }
-
-    .hero-photo{
-        width:165px;
-        height:165px;
+        font-size:34px;
     }
 
     .reasons-grid{
@@ -974,11 +483,7 @@ audio{
     }
 
     .photo img{
-        height:155px;
-    }
-
-    .message-card{
-        padding:40px 18px;
+        height:150px;
     }
 
 }
@@ -991,36 +496,14 @@ audio{
 
 
 <!-- =========================
-     MUSIC BUTTON
-========================= -->
-
-<div class="music-player">
-
-<button class="music-button" onclick="toggleMusic()" id="musicBtn">
-🎵
-</button>
-
-<audio id="song" loop>
-    <source src="song.mp3" type="audio/mpeg">
-</audio>
-
-</div>
-
-
-<!-- =========================
-     HERO
+     1. FIRST SCREEN
 ========================= -->
 
 <section class="hero" id="home">
 
-<div class="decor one">✦</div>
-<div class="decor two">♡</div>
-<div class="decor three">✧</div>
-<div class="decor four">♡</div>
-
 <div class="hero-content">
 
-<div class="eyebrow">
+<div class="small-text">
 A SPECIAL DAY • A SPECIAL PERSON
 </div>
 
@@ -1029,19 +512,19 @@ src="20250610_001333_IMG_0968.JPG"
 class="hero-photo"
 alt="Sara">
 
-<div class="hero-age">
-THIRTY THREE
+<div class="age">
+33 YEARS
 </div>
 
 <h1>
 Happy Birthday <span>Sara</span>
 </h1>
 
-<p class="hero-subtitle">
-إلى واحدة من أجمل الناس في حياتي ❤️
+<p>
+إلى واحدة من أجمل وأغلى الناس في حياتي ❤️
 </p>
 
-<button class="luxury-btn" onclick="openSurprise()">
+<button class="btn" onclick="openSurprise()">
 🎁 افتحي المفاجأة
 </button>
 
@@ -1051,16 +534,16 @@ Happy Birthday <span>Sara</span>
 
 
 <!-- =========================
-     SURPRISE MESSAGE
+     2. BIG MESSAGE
 ========================= -->
 
 <section class="surprise hidden" id="surprise">
 
 <div class="message-card">
 
-<div class="message-head">
+<div class="message-title">
 
-<div class="age">
+<div class="message-number">
 33
 </div>
 
@@ -1069,7 +552,6 @@ Happy Birthday <span>Sara</span>
 </h2>
 
 </div>
-
 
 <div class="message">
 
@@ -1155,27 +637,22 @@ Happy Birthday <span>Sara</span>
 وكل سنة وأنا محظوظة إن عندي صاحبة زيك. ❤️
 </p>
 
-</div>
+<p>
+وعقبال 100 سنة حلوة…
+100 سنة ضحك وفرح ونجاح وذكريات وأيام أجمل من اللي فاتت. ✨
+</p>
 
+</div>
 
 <div class="signature">
-
 بحبك يا سارة ❤️
-
 <br>
-
 إسراء
-
 </div>
 
-
-<div class="message-button">
-
-<button class="luxury-btn" onclick="showAllSections()">
+<button class="btn" onclick="showEverything()">
 ✨ كملي المفاجأة
 </button>
-
-</div>
 
 </div>
 
@@ -1183,31 +660,24 @@ Happy Birthday <span>Sara</span>
 
 
 <!-- =========================
-     MUSIC
+     3. SONG
 ========================= -->
 
-<section class="music-section hidden" id="musicSection">
+<section class="music hidden" id="music">
 
-<div class="section-label">
-OUR SONG
+<div class="section-title">
+🎵 أغنيتنا
 </div>
 
-<h2 class="section-title">
-🎵 أغنية ليكي
-</h2>
-
 <p class="section-text">
-شغلي الأغنية وخلي الذكريات تكمل الحكاية ❤️
+سبحانه من خلق وسوى ❤️
 </p>
 
 <div class="audio-box">
 
-<p>
-سبحانه من خلق وسوى 🎶
-</p>
-
-<audio id="mainAudio" controls loop>
-    <source src="song.mp3" type="audio/mpeg">
+<audio controls loop>
+<source src="song.mp3" type="audio/mpeg">
+متصفحك لا يدعم تشغيل الصوت.
 </audio>
 
 </div>
@@ -1216,196 +686,58 @@ OUR SONG
 
 
 <!-- =========================
-     33 THINGS
+     4. 33 THINGS
 ========================= -->
 
 <section class="reasons hidden" id="reasons">
 
 <div class="reasons-header">
 
-<div class="section-label">
-33 REASONS
+<div class="section-title">
+33 حاجة بحبها في سارة ❤️
 </div>
 
-<h2 class="section-title">
-33 حاجة بحبها في سارة ❤️
-</h2>
-
 <p class="section-text">
-33 سبب… عشان 33 سنة مش رقم عادي ✨
+عشان 33 سنة… لازم يكونوا 33 سبب ✨
 </p>
 
 </div>
 
-
 <div class="reasons-grid">
 
-
-<div class="reason">
-<div class="reason-number">01</div>
-<p>طيبة قلبك اللي بتبان من غير كلام.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">02</div>
-<p>ضحكتك اللي بتغير مود أي مكان.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">03</div>
-<p>جدعنتك وقت ما الواحد بيحتاجك.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">04</div>
-<p>إنك بتسمعي من قلبك.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">05</div>
-<p>إن وجودك بيطمن.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">06</div>
-<p>روحك الحلوة.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">07</div>
-<p>ذكرياتنا اللي عمرها ما بتتنسى.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">08</div>
-<p>الضحك اللي ملوش سبب بينا.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">09</div>
-<p>إنك بتفرحي لفرح اللي بتحبيهم.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">10</div>
-<p>إنك دايمًا على طبيعتك.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">11</div>
-<p>قلبك الأبيض.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">12</div>
-<p>إنك بتعرفي تخلي اليوم أحلى.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">13</div>
-<p>اهتمامك بالتفاصيل الصغيرة.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">14</div>
-<p>كلامك اللي بيهون وقت الزعل.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">15</div>
-<p>إنك صاحبة تتسند عليها.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">16</div>
-<p>إنك بتفهمي من غير شرح كتير.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">17</div>
-<p>روحك المرحة.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">18</div>
-<p>إنك بتخلي الذكريات ليها معنى.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">19</div>
-<p>صراحتك.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">20</div>
-<p>حنانك.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">21</div>
-<p>إنك بتفضلي موجودة وقت اللزوم.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">22</div>
-<p>قوة شخصيتك.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">23</div>
-<p>إنك بتشجعي اللي حواليكي.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">24</div>
-<p>إنك بتعرفي تفرحي من قلبك.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">25</div>
-<p>عفويتك.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">26</div>
-<p>كل مرة ضحكنا فيها سوا.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">27</div>
-<p>كل موقف وقفنا فيه جنب بعض.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">28</div>
-<p>كل صورة جمعتنا.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">29</div>
-<p>كل حكاية بينا.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">30</div>
-<p>إنك ببساطة… سارة.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">31</div>
-<p>إن وجودك في حياتي نعمة.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">32</div>
-<p>إن صداقتنا من الذكريات اللي بعتز بيها.</p>
-</div>
-
-<div class="reason">
-<div class="reason-number">33</div>
-<p>لأنك واحدة من أغلى الناس على قلبي ❤️</p>
-</div>
-
+<div class="reason"><div class="reason-number">01</div><p>طيبة قلبك.</p></div>
+<div class="reason"><div class="reason-number">02</div><p>ضحكتك الجميلة.</p></div>
+<div class="reason"><div class="reason-number">03</div><p>جدعنتك.</p></div>
+<div class="reason"><div class="reason-number">04</div><p>إنك بتسمعي من قلبك.</p></div>
+<div class="reason"><div class="reason-number">05</div><p>إن وجودك بيطمن.</p></div>
+<div class="reason"><div class="reason-number">06</div><p>روحك الحلوة.</p></div>
+<div class="reason"><div class="reason-number">07</div><p>ذكرياتنا سوا.</p></div>
+<div class="reason"><div class="reason-number">08</div><p>الضحك اللي بينا.</p></div>
+<div class="reason"><div class="reason-number">09</div><p>إنك بتفرحي لفرح اللي بتحبيهم.</p></div>
+<div class="reason"><div class="reason-number">10</div><p>إنك دايمًا على طبيعتك.</p></div>
+<div class="reason"><div class="reason-number">11</div><p>قلبك الأبيض.</p></div>
+<div class="reason"><div class="reason-number">12</div><p>إنك بتخلي اليوم أحلى.</p></div>
+<div class="reason"><div class="reason-number">13</div><p>اهتمامك بالتفاصيل.</p></div>
+<div class="reason"><div class="reason-number">14</div><p>كلامك اللي بيهون الزعل.</p></div>
+<div class="reason"><div class="reason-number">15</div><p>إنك صاحبة يتسند عليها.</p></div>
+<div class="reason"><div class="reason-number">16</div><p>إنك بتفهمي من غير كلام كتير.</p></div>
+<div class="reason"><div class="reason-number">17</div><p>روحك المرحة.</p></div>
+<div class="reason"><div class="reason-number">18</div><p>إنك بتخلي الذكريات أحلى.</p></div>
+<div class="reason"><div class="reason-number">19</div><p>صراحتك.</p></div>
+<div class="reason"><div class="reason-number">20</div><p>حنانك.</p></div>
+<div class="reason"><div class="reason-number">21</div><p>إنك موجودة وقت اللزوم.</p></div>
+<div class="reason"><div class="reason-number">22</div><p>قوة شخصيتك.</p></div>
+<div class="reason"><div class="reason-number">23</div><p>إنك بتشجعي اللي حواليكي.</p></div>
+<div class="reason"><div class="reason-number">24</div><p>فرحتك من قلبك.</p></div>
+<div class="reason"><div class="reason-number">25</div><p>عفويتك.</p></div>
+<div class="reason"><div class="reason-number">26</div><p>كل ضحكة بينا.</p></div>
+<div class="reason"><div class="reason-number">27</div><p>كل موقف وقفنا فيه جنب بعض.</p></div>
+<div class="reason"><div class="reason-number">28</div><p>كل صورة جمعتنا.</p></div>
+<div class="reason"><div class="reason-number">29</div><p>كل حكاية بينا.</p></div>
+<div class="reason"><div class="reason-number">30</div><p>إنك ببساطة سارة.</p></div>
+<div class="reason"><div class="reason-number">31</div><p>وجودك في حياتي نعمة.</p></div>
+<div class="reason"><div class="reason-number">32</div><p>صداقتنا.</p></div>
+<div class="reason"><div class="reason-number">33</div><p>لأنك من أغلى الناس على قلبي ❤️</p></div>
 
 </div>
 
@@ -1413,27 +745,18 @@ OUR SONG
 
 
 <!-- =========================
-     MEMORIES
+     5. MEMORIES
 ========================= -->
 
 <section class="memories hidden" id="memories">
 
-<div class="memories-header">
-
-<div class="section-label">
-OUR MEMORIES
+<div class="section-title">
+📸 ذكرياتنا
 </div>
 
-<h2>
-20 صورة… وذكريات كتير ❤️
-</h2>
-
-<p>
-كل صورة هنا وراها حكاية وضحكة ووقت حلو.
+<p class="section-text">
+20 صورة من أجمل لحظاتنا ❤️
 </p>
-
-</div>
-
 
 <div class="gallery">
 
@@ -1468,91 +791,47 @@ OUR MEMORIES
 
 
 <!-- =========================
-     TIMELINE
+     6. STORY
 ========================= -->
 
-<section class="timeline-section hidden" id="timeline">
+<section class="story hidden" id="story">
 
-<div class="section-label">
-OUR STORY
+<div class="section-title">
+💕 حكايتنا
 </div>
-
-<h2 class="section-title">
-حكايتنا ❤️
-</h2>
 
 <p class="section-text">
-من أول الذكريات لحد كل اللي لسه جاي.
+ذكريات صغيرة عملت حكاية كبيرة.
 </p>
 
+<div class="story-box">
 
-<div class="timeline">
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
+<div class="story-item">
 <h3>البداية</h3>
-
 <p>
-من هنا بدأت حكايات كتير، ومحدش كان يعرف إن الأيام هتعمل كل الذكريات الحلوة دي.
+من أول ما عرفنا بعض بدأت حكايات وذكريات مكنش حد يعرف إنها هتبقى مهمة بالشكل ده.
 </p>
-
 </div>
 
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
-<h3>ضحكات كتير</h3>
-
+<div class="story-item">
+<h3>الضحك</h3>
 <p>
-ضحكات ومواقف يمكن ملهاش معنى لحد تاني، لكنها بالنسبالنا ذكريات عمرها ما هتتنسي.
+مواقف كتير يمكن مكنتش تضحك حد غيرنا، لكن لحد دلوقتي مجرد ما نفتكرها بنضحك.
 </p>
-
 </div>
 
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
-<h3>وقت صعب</h3>
-
+<div class="story-item">
+<h3>السند</h3>
 <p>
-وفي الأيام الصعبة كان دايمًا فيه سند، وكلمة حلوة، ووجود بيهون كل حاجة.
+وفي أوقات كتير كان وجودك لوحده كفاية يخلي أي حاجة صعبة تعدي.
 </p>
-
 </div>
 
-</div>
-
-
-<div class="timeline-item">
-
-<div class="timeline-dot"></div>
-
-<div class="timeline-card">
-
-<h3>ذكريات أكتر</h3>
-
+<div class="story-item">
+<h3>والحكاية لسه مستمرة</h3>
 <p>
-والأجمل إن الحكاية لسه مخلصتش… ولسه في صور وضحكات وأيام كتير مستنيانا.
+لسه في صور كتير، وضحكات كتير، وأيام حلوة مستنيانا. ❤️
 </p>
-
-</div>
-
 </div>
 
 </div>
@@ -1561,37 +840,28 @@ OUR STORY
 
 
 <!-- =========================
-     FINAL
+     7. FINAL
 ========================= -->
 
 <section class="final">
 
-<div class="final-content">
-
-<div class="section-label">
-WITH LOVE • ALWAYS
-</div>
+<div>
 
 <h2>
 For Sara ❤️
 </h2>
 
 <p>
-مش كل الناس اللي بنقابلهم في حياتنا بيبقوا مجرد أشخاص…
-في ناس بيبقوا ذكريات، وأمان، وضحكة،
-وحكايات بنفضل نفتكرها طول العمر.
+كل سنة وإنتِ طيبة يا سارة 🎂
+<br>
+وعقبال 100 سنة فرح وسعادة ونجاح.
 <br><br>
-
-وأنتِ واحدة من أجمل الحكايات اللي حصلتلي. ❤️
-<br><br>
-
-كل سنة وإنتِ طيبة يا سارة،
-وعقبال 100 سنة من الفرح والنجاح والحب والذكريات الحلوة.
-🎂✨
+ودي مش نهاية الذكريات…
+دي بداية ذكريات جديدة. ✨
 </p>
 
 <div class="final-sign">
-— Esraa
+— إسراء ❤️
 </div>
 
 </div>
@@ -1600,60 +870,25 @@ For Sara ❤️
 
 
 <!-- =========================
-     LIGHTBOX
+     PHOTO VIEWER
 ========================= -->
 
 <div class="lightbox" id="lightbox">
 
-<div class="close" onclick="closePhoto()">×</div>
+<div class="close" onclick="closeImage()">×</div>
 
-<img id="lightboxImage" src="" alt="Memory">
+<img id="bigImage" src="" alt="Photo">
 
 </div>
 
 
 <script>
 
-
-/* =========================
-   MUSIC
-========================= */
-
-let musicPlaying=false;
-
-function toggleMusic(){
-
-    const song=document.getElementById("song");
-    const btn=document.getElementById("musicBtn");
-
-    if(musicPlaying){
-
-        song.pause();
-
-        btn.innerHTML="🎵";
-
-        musicPlaying=false;
-
-    }else{
-
-        song.play().catch(()=>{});
-
-        btn.innerHTML="⏸️";
-
-        musicPlaying=true;
-
-    }
-
-}
-
-
-/* =========================
-   OPEN SURPRISE
-========================= */
+/* ===== OPEN SURPRISE ===== */
 
 function openSurprise(){
 
-    const surprise=
+    var surprise =
     document.getElementById("surprise");
 
     surprise.classList.remove("hidden");
@@ -1662,156 +897,127 @@ function openSurprise(){
         behavior:"smooth"
     });
 
-    createParticles();
-
+    createHearts();
 }
 
 
-/* =========================
-   SHOW EVERYTHING
-========================= */
+/* ===== SHOW ALL ===== */
 
-function showAllSections(){
+function showEverything(){
 
-    document
-    .getElementById("musicSection")
+    document.getElementById("music")
     .classList.remove("hidden");
 
-    document
-    .getElementById("reasons")
+    document.getElementById("reasons")
     .classList.remove("hidden");
 
-    document
-    .getElementById("memories")
+    document.getElementById("memories")
     .classList.remove("hidden");
 
-    document
-    .getElementById("timeline")
+    document.getElementById("story")
     .classList.remove("hidden");
 
-    document
-    .getElementById("musicSection")
+    document.getElementById("music")
     .scrollIntoView({
         behavior:"smooth"
     });
-
 }
 
 
-/* =========================
-   PARTICLES
-========================= */
+/* ===== HEARTS ===== */
 
-function createParticles(){
+function createHearts(){
 
-    const symbols=[
-        "♡",
-        "♥",
-        "✦",
-        "✧",
-        "✨",
+    var symbols=[
+        "❤️",
         "💕",
-        "❤"
+        "💗",
+        "♡",
+        "✨"
     ];
 
-    const surprise=
+    var area=
     document.getElementById("surprise");
 
-    for(let i=0;i<45;i++){
+    for(var i=0;i<30;i++){
 
-        const particle=
+        var heart=
         document.createElement("div");
 
-        particle.className="particle";
+        heart.className="heart";
 
-        particle.innerHTML=
+        heart.innerHTML=
         symbols[
             Math.floor(
                 Math.random()*symbols.length
             )
         ];
 
-        particle.style.left=
+        heart.style.left=
         Math.random()*100+"%";
 
-        particle.style.fontSize=
-        (12+Math.random()*25)+"px";
+        heart.style.animationDuration=
+        (4+Math.random()*4)+"s";
 
-        particle.style.animationDuration=
-        (4+Math.random()*5)+"s";
+        area.appendChild(heart);
 
-        surprise.appendChild(particle);
-
-        setTimeout(()=>{
-            particle.remove();
-        },9000);
+        setTimeout(function(){
+            if(heart.parentNode){
+                heart.parentNode.removeChild(heart);
+            }
+        },8000);
 
     }
+}
+
+
+/* ===== PHOTO VIEWER ===== */
+
+var photos=
+document.querySelectorAll(".photo img");
+
+for(var i=0;i<photos.length;i++){
+
+    photos[i].onclick=function(){
+
+        document
+        .getElementById("bigImage")
+        .src=this.src;
+
+        document
+        .getElementById("lightbox")
+        .classList.add("show");
+
+    };
 
 }
 
 
-/* =========================
-   LIGHTBOX
-========================= */
+/* ===== CLOSE PHOTO ===== */
 
-document
-.querySelectorAll(".photo img")
-.forEach(function(img){
-
-    img.addEventListener("click",function(){
-
-        const lightbox=
-        document.getElementById("lightbox");
-
-        const lightboxImage=
-        document.getElementById("lightboxImage");
-
-        lightboxImage.src=this.src;
-
-        lightbox.classList.add("active");
-
-    });
-
-});
-
-
-function closePhoto(){
+function closeImage(){
 
     document
     .getElementById("lightbox")
-    .classList.remove("active");
+    .classList.remove("show");
 
 }
 
+
+/* ===== CLICK OUTSIDE PHOTO ===== */
 
 document
 .getElementById("lightbox")
 .addEventListener("click",function(e){
 
     if(e.target===this){
-
-        closePhoto();
-
+        closeImage();
     }
 
 });
 
-
-/* ESC TO CLOSE PHOTO */
-
-document.addEventListener("keydown",function(e){
-
-    if(e.key==="Escape"){
-
-        closePhoto();
-
-    }
-
-});
 
 </script>
 
-
 </body>
-</html>
+   </html>
