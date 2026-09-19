@@ -1,228 +1,455 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy 33rd Birthday Sara 🎂</title>
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Sara 🎂</title>
 
 <style>
-*{box-sizing:border-box}
 
-html{scroll-behavior:smooth}
-
-body{
-margin:0;
-font-family:Tahoma,Arial,sans-serif;
-background:linear-gradient(135deg,#fff0f5,#ffe0ec,#fff7df);
-color:#5a3045;
-overflow-x:hidden;
+* {
+    box-sizing: border-box;
 }
 
-#intro{
-position:fixed;
-inset:0;
-z-index:1000;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-padding:20px;
-background:linear-gradient(135deg,#ffd6e5,#fff0f5);
-transition:.8s;
+body {
+    margin: 0;
+    font-family: Arial, Tahoma, sans-serif;
+    background: linear-gradient(135deg, #ffe5ef, #fff4df);
+    color: #5a3045;
+    text-align: center;
 }
 
-#intro.hide{
-opacity:0;
-visibility:hidden;
+/* البداية */
+
+.intro {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
 }
 
-.intro-box{
-max-width:600px;
-padding:35px 25px;
-background:rgba(255,255,255,.85);
-border-radius:35px;
-box-shadow:0 20px 60px rgba(100,30,60,.2);
+.intro-box {
+    background: white;
+    padding: 35px 25px;
+    border-radius: 30px;
+    max-width: 550px;
+    box-shadow: 0 15px 40px rgba(0,0,0,.15);
 }
 
-.cake{
-font-size:65px;
+.intro-box h1 {
+    color: #c43c73;
+    font-size: 45px;
 }
 
-.intro-box h1{
-font-size:55px;
-color:#c43c73;
-margin:10px;
+.intro-box p {
+    font-size: 19px;
+    line-height: 1.8;
 }
 
-.intro-box p{
-font-size:20px;
-line-height:1.8;
+/* الأزرار */
+
+button {
+    background: #d84d80;
+    color: white;
+    border: none;
+    padding: 15px 28px;
+    border-radius: 30px;
+    font-size: 17px;
+    cursor: pointer;
 }
 
-button{
-border:0;
-border-radius:50px;
-padding:15px 28px;
-background:linear-gradient(135deg,#d84d80,#b92e66);
-color:white;
-font-size:18px;
-font-weight:bold;
-cursor:pointer;
-box-shadow:0 8px 25px rgba(180,40,100,.25);
+button:hover {
+    background: #b92f67;
 }
 
-.hero{
-min-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:40px 20px;
+/* الهيرو */
+
+.hero {
+    padding: 60px 20px;
 }
 
-.hero h1{
-font-size:clamp(38px,9vw,70px);
-color:#c43c73;
-margin:20px 0 5px;
+.hero h1 {
+    color: #c43c73;
+    font-size: 45px;
 }
 
-.hero h2{
-font-size:clamp(21px,5vw,32px);
+.hero h2 {
+    font-size: 25px;
 }
 
-.hero-photo{
-width:min(92vw,470px);
-max-height:560px;
-object-fit:cover;
-border-radius:30px;
-border:7px solid white;
-box-shadow:0 20px 50px rgba(80,30,60,.25);
+.main-photo {
+    width: 90%;
+    max-width: 450px;
+    border-radius: 25px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.2);
 }
 
-section{
-padding:70px 18px;
+/* الأقسام */
+
+section {
+    padding: 60px 20px;
 }
 
-.container{
-max-width:1050px;
-margin:auto;
+.title {
+    color: #c43c73;
+    font-size: 35px;
+    margin-bottom: 25px;
 }
 
-.title{
-text-align:center;
-font-size:40px;
-color:#bd386d;
-margin-bottom:15px;
+/* الرسالة */
+
+.message {
+    max-width: 850px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 25px;
+    line-height: 2;
+    font-size: 18px;
+    text-align: right;
+    box-shadow: 0 10px 30px rgba(0,0,0,.1);
 }
 
-.message{
-max-width:850px;
-margin:auto;
-background:rgba(255,255,255,.82);
-padding:28px;
-border-radius:28px;
-box-shadow:0 10px 30px rgba(80,30,60,.12);
-font-size:18px;
-line-height:2.2;
-white-space:pre-line;
+/* الصور */
+
+.gallery {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
 }
 
-.gallery{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-gap:18px;
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 18px;
+    cursor: pointer;
+    box-shadow: 0 5px 20px rgba(0,0,0,.15);
 }
 
-.photo-box{
-background:white;
-padding:8px;
-border-radius:20px;
-box-shadow:0 8px 25px rgba(70,30,50,.15);
-cursor:pointer;
-transition:.25s;
+/* المفاجأة */
+
+.surprise-box {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 35px;
+    border-radius: 30px;
+    box-shadow: 0 10px 35px rgba(0,0,0,.15);
 }
 
-.photo-box:hover{
-transform:translateY(-5px);
+#surprise {
+    display: none;
+    margin-top: 25px;
+    font-size: 23px;
+    line-height: 2;
+    color: #c43c73;
 }
 
-.photo-box img{
-width:100%;
-height:250px;
-object-fit:cover;
-border-radius:15px;
-display:block;
+/* الفوتر */
+
+footer {
+    padding: 30px;
 }
 
-.reasons{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-gap:14px;
+/* الموبايل */
+
+@media(max-width:700px) {
+
+    .hero h1 {
+        font-size: 35px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery img {
+        height: 180px;
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
 }
 
-.reason{
-background:rgba(255,255,255,.8);
-padding:18px;
-border-radius:20px;
-text-align:center;
-font-size:17px;
-box-shadow:0 7px 20px rgba(80,30,50,.1);
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- الصفحة الأولى -->
+
+<div class="intro">
+
+    <div class="intro-box">
+
+        <div style="font-size:60px;">
+            🎂
+        </div>
+
+        <h1>
+            Sara
+        </h1>
+
+        <p>
+            عندي ليكي هدية صغيرة ❤️
+            <br>
+            جاهزة نبدأ الذكريات؟
+        </p>
+
+        <button onclick="start()">
+            🎁 افتحي هديتك
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- البداية -->
+
+<div class="hero">
+
+    <h1>
+        Happy 33rd Birthday Sara 🎂
+    </h1>
+
+    <h2>
+        إلى أغلى وأعز صاحبة في الدنيا ❤️
+    </h2>
+
+    <img
+        class="main-photo"
+        src="20250610_001333_IMG_0968.JPG"
+        alt="Sara">
+
+    <p style="font-size:20px;line-height:1.8;">
+
+        كل سنة وأنتِ طيبة وبألف خير
+        وصحة وسعادة ✨
+
+    </p>
+
+</div>
+
+
+<!-- الرسالة -->
+
+<section>
+
+    <h2 class="title">
+        💌 رسالة من إسراء لسارة
+    </h2>
+
+    <div class="message">
+
+        كل سنة وأنتِ طيبة وبألف خير وصحة وسعادة ✨
+
+        <br><br>
+
+        في يوم عيد ميلادك حبيت أكتبلك كلام ينوّر يومك زيك بالضبط، كلام طالع من قلبي عشان يفكرك قد إيه أنتِ شخص غالي ومميز جداً في حياتي.
+
+        <br><br>
+
+        السنوات بتعدي والناس بتيجي وتروح لكن الصداقة الحقيقية هي اللي بتفضل ثابته زي ما هي وأنتِ أثبتّي لي دايماً إنك مش مجرد صاحبة أنتِ أخت وسند والضحكة الدايمة اللي بتنور أوقاتي الحلوة والكتف اللي بيبسّط أي وقت صعب.
+
+        <br><br>
+
+        ربنا يجعل السنة الجديدة دي سنة خير وبركة عليكي تحقق فيها كل خطوة بتتمنيها وكل حلم شغالة عليه وتفتحلك أبواب النجاح والفرح من أوسع أبوابه.
+
+        <br><br>
+
+        بتمنالك أيام مليانة راحة بال وضحك من القلب وناس تحبك وتعرف قيمتك زي ما أنتِ تستاهلي.
+
+        <br><br>
+
+        شكراً على كل لحظة حلوة شاركتيها معايا وعلى كل ضحكة من القلب وعلى كل كلمة طمنتيني بيها.
+
+        <br><br>
+
+        شكراً لأنك دايماً موجودة وبنفس الطيبة والجدعنة.
+
+        <br><br>
+
+        كل سنة وأنتِ أقرب لقلبي وعقبال 100 سنة حلوة شبه قلبك 🎂🎉✨
+
+        <br><br>
+
+        من إسراء ❤️
+
+    </div>
+
+</section>
+
+
+<!-- الصور -->
+
+<section>
+
+    <h2 class="title">
+        📸 Our Memories
+    </h2>
+
+    <p>
+        أجمل 20 ذكرى ❤️
+    </p>
+
+    <div class="gallery">
+
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+        <img src="photo3.jpg">
+        <img src="photo4.jpg">
+
+        <img src="photo5.jpg">
+        <img src="photo6.jpg">
+        <img src="photo7.jpg">
+        <img src="photo8.jpg">
+
+        <img src="photo9.jpg">
+        <img src="photo10.jpg">
+        <img src="photo11.jpg">
+        <img src="photo12.jpg">
+
+        <img src="photo13.jpg">
+        <img src="photo14.jpg">
+        <img src="photo15.jpg">
+        <img src="photo16.jpg">
+
+        <img src="photo17.jpg">
+        <img src="photo18.jpg">
+        <img src="photo19.jpg">
+        <img src="photo20.jpg">
+
+    </div>
+
+</section>
+
+
+<!-- المفاجأة -->
+
+<section>
+
+    <div class="surprise-box">
+
+        <h2 class="title">
+            🎁 Surprise Sara
+        </h2>
+
+        <p>
+            عندي حاجة أخيرة ليكي ❤️
+        </p>
+
+        <button onclick="surprise()">
+            🎉 افتحي المفاجأة
+        </button>
+
+        <div id="surprise">
+
+            كل سنة وإنتِ أجمل وأغلى صاحبة ❤️
+
+            <br>
+
+            عقبال 100 سنة كلها فرحة
+            ونجاح وضحك وذكريات حلوة 🎂✨
+
+            <br><br>
+
+            بحبك يا سارة ❤️
+
+            <br>
+
+            من إسراء
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    Made with ❤️ for Sara
+
+</footer>
+
+
+<script>
+
+function start() {
+
+    window.scrollTo({
+        top: window.innerHeight,
+        behavior: "smooth"
+    });
+
 }
 
-.final{
-min-height:70vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
+
+function surprise() {
+
+    document.getElementById("surprise").style.display = "block";
+
+    for (let i = 0; i < 30; i++) {
+
+        let heart = document.createElement("div");
+
+        heart.innerHTML = "❤️";
+
+        heart.style.position = "fixed";
+        heart.style.top = "-30px";
+        heart.style.left =
+            Math.random() * 100 + "%";
+
+        heart.style.fontSize = "25px";
+
+        heart.style.zIndex = "999";
+
+        heart.style.transition =
+            "transform 4s linear, opacity 4s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(function() {
+
+            heart.style.transform =
+                "translateY(100vh)";
+
+            heart.style.opacity = "0";
+
+        }, 100);
+
+        setTimeout(function() {
+
+            heart.remove();
+
+        }, 4500);
+
+    }
+
 }
 
-.final-box{
-max-width:750px;
-background:rgba(255,255,255,.85);
-padding:35px 22px;
-border-radius:32px;
-box-shadow:0 15px 50px rgba(80,30,50,.15);
-}
+</script>
 
-.final-box h2{
-font-size:45px;
-color:#c43c73;
-}
 
-#surprise{
-display:none;
-font-size:24px;
-line-height:1.9;
-margin-top:25px;
-}
+</body>
 
-.music{
-position:fixed;
-left:12px;
-bottom:12px;
-z-index:500;
-background:white;
-padding:8px;
-border-radius:50px;
-box-shadow:0 6px 20px rgba(0,0,0,.15);
-}
-
-.music button{
-padding:10px 16px;
-font-size:14px;
-}
-
-.heart{
-position:fixed;
-top:-40px;
-z-index:999;
-pointer-events:none;
-animation:fall 5s linear forwards;
-}
-
-@keyframes fall{
-to{
-transform:translateY(110vh) rotate(360deg);
-opacity
+</html>
